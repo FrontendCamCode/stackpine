@@ -1,0 +1,145 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Stackpine - Direct Response Marketing, Powered by AI">
+  <!-- Nav -->
+  <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="text-xl font-bold tracking-tight text-gray-900">Stackpine</a>
+      <div class="flex items-center gap-6">
+        <a href="#features" class="text-sm text-gray-600 hover:text-gray-900 hidden sm:block">Features</a>
+        <a href="#how-it-works" class="text-sm text-gray-600 hover:text-gray-900 hidden sm:block">How It Works</a>
+        <a href="#cta" class="text-sm font-medium bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors">Get Started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-32 pb-20 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl sm:text-6xl font-bold tracking-tight leading-tight">
+        Direct response marketing,<br />
+        <span class="text-emerald-600">powered by AI.</span>
+      </h1>
+      <p class="mt-6 text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        Run your entire funnel with one command. Stackpine optimizes your landing pages, ad copy, and conversions so you can focus on your product.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#cta" class="inline-flex items-center justify-center bg-emerald-600 text-white text-lg font-medium px-8 py-3.5 rounded-xl hover:bg-emerald-700 transition-colors">
+          Start Free
+        </a>
+        <a href="#how-it-works" class="inline-flex items-center justify-center bg-gray-100 text-gray-700 text-lg font-medium px-8 py-3.5 rounded-xl hover:bg-gray-200 transition-colors">
+          See How It Works
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social proof bar -->
+  <section class="border-y border-gray-100 py-8 px-6">
+    <div class="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-sm text-gray-400 font-medium">
+      <span>Trusted by marketers worldwide</span>
+      <span class="hidden sm:inline text-gray-200">|</span>
+      <span>AI-native from day one</span>
+      <span class="hidden sm:inline text-gray-200">|</span>
+      <span>Built in public</span>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Everything you need to convert</h2>
+        <p class="mt-4 text-lg text-gray-600 max-w-xl mx-auto">One platform that handles your entire direct response marketing stack.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-8 rounded-2xl border border-gray-100 hover:border-gray-200 transition-colors">
+          <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Landing Page Analysis</h3>
+          <p class="text-gray-600 leading-relaxed">AI reviews your pages against proven direct response principles and gives you specific improvements.</p>
+        </div>
+        <div class="p-8 rounded-2xl border border-gray-100 hover:border-gray-200 transition-colors">
+          <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Ad Copy Optimization</h3>
+          <p class="text-gray-600 leading-relaxed">Generate and refine ad copy that speaks to your audience's pain points and drives clicks.</p>
+        </div>
+        <div class="p-8 rounded-2xl border border-gray-100 hover:border-gray-200 transition-colors">
+          <div class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Funnel Walkthrough</h3>
+          <p class="text-gray-600 leading-relaxed">Step-by-step audit of your entire funnel from ad to checkout, identifying every leak.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="py-24 px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">How it works</h2>
+        <p class="mt-4 text-lg text-gray-600">Three steps to better conversions.</p>
+      </div>
+      <div class="space-y-12">
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+          <div>
+            <h3 class="text-lg font-semibold">Connect your funnel</h3>
+            <p class="mt-1 text-gray-600">Point Stackpine at your landing page, ads, or email sequence. It works with any stack.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+          <div>
+            <h3 class="text-lg font-semibold">Get AI-powered analysis</h3>
+            <p class="mt-1 text-gray-600">Stackpine reviews every touchpoint using proven direct response principles and identifies what to fix.</p>
+          </div>
+        </div>
+        <div class="flex gap-6 items-start">
+          <div class="flex-shrink-0 w-10 h-10 bg-emerald-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+          <div>
+            <h3 class="text-lg font-semibold">Ship improvements, fast</h3>
+            <p class="mt-1 text-gray-600">Apply the recommendations, generate new copy, and watch your conversion rate climb.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta" class="py-24 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Ready to stop guessing?</h2>
+      <p class="mt-4 text-lg text-gray-600 max-w-xl mx-auto">Join the waitlist and be the first to run your marketing on Stackpine.</p>
+      <form class="mt-10 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input
+          type="email"
+          placeholder="you@company.com"
+          class="flex-1 px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+          required
+        />
+        <button type="submit" class="bg-emerald-600 text-white font-medium px-6 py-3 rounded-xl hover:bg-emerald-700 transition-colors whitespace-nowrap">
+          Join Waitlist
+        </button>
+      </form>
+      <p class="mt-4 text-sm text-gray-400">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-100 py-10 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span class="text-sm text-gray-400">&copy; {new Date().getFullYear()} Stackpine. All rights reserved.</span>
+      <div class="flex gap-6">
+        <a href="mailto:support@stackpine.com" class="text-sm text-gray-400 hover:text-gray-600">Contact</a>
+      </div>
+    </div>
+  </footer>
+</Layout>
