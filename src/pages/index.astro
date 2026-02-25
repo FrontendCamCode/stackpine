@@ -9,7 +9,19 @@ const secondaryCta = 'mailto:support@stackpine.com?subject=Tell%20Me%20How%20Sta
   title="Stackpine | Web Development For Performance Growth"
   description="Stackpine is a web development partner for brands that need better conversion from paid traffic."
 >
-  <main class="min-h-[100svh] flex items-center">
+  <header class="fixed inset-x-0 top-0 z-40 border-b border-separator bg-background/90 backdrop-blur-xl">
+    <div class="mx-auto flex h-14 max-w-5xl items-center px-6">
+      <p class="text-sm font-semibold tracking-tight">Stackpine</p>
+      <div class="ml-auto flex items-center gap-2 sm:gap-3">
+        <a href={secondaryCta} class="hidden sm:inline-flex text-sm text-secondary transition-colors hover:text-black">How We Work</a>
+        <a href={primaryCta} class="inline-flex items-center justify-center rounded-full btn-primary px-4 py-1.5 text-xs sm:text-sm font-semibold text-white">
+          Start Project
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="min-h-[100svh] flex items-center pt-24 pb-28 sm:pb-24">
     <section class="w-full">
       <div class="mx-auto max-w-5xl px-6 py-10">
         <p class="text-xs sm:text-sm font-semibold uppercase tracking-[0.13em] text-[rgb(17,168,255)]">Stackpine · CMO + CRO Web Development</p>
@@ -23,8 +35,8 @@ const secondaryCta = 'mailto:support@stackpine.com?subject=Tell%20Me%20How%20Sta
           and development are built as one system.
         </p>
 
-        <div class="mt-8 grid max-w-4xl gap-4 sm:grid-cols-3">
-          <div class="flex gap-3">
+        <div class="mt-8 grid max-w-3xl gap-4">
+          <div class="flex gap-3 border-t border-separator pt-3">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icons-tabler-outline icon-tabler-target-arrow mt-0.5 shrink-0" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
@@ -35,7 +47,7 @@ const secondaryCta = 'mailto:support@stackpine.com?subject=Tell%20Me%20How%20Sta
             <p class="text-sm sm:text-base text-secondary">Message-to-market clarity from click to conversion action.</p>
           </div>
 
-          <div class="flex gap-3">
+          <div class="flex gap-3 border-t border-separator pt-3">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icons-tabler-outline icon-tabler-code mt-0.5 shrink-0" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <path d="M7 8l-4 4l4 4" />
@@ -45,7 +57,7 @@ const secondaryCta = 'mailto:support@stackpine.com?subject=Tell%20Me%20How%20Sta
             <p class="text-sm sm:text-base text-secondary">Web development across landing pages, websites, and funnel flows.</p>
           </div>
 
-          <div class="flex gap-3">
+          <div class="flex gap-3 border-t border-separator pt-3">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icons-tabler-outline icon-tabler-bolt mt-0.5 shrink-0" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <path d="M13 2l-8 12h6l-2 8l8 -12h-6l2 -8" />
@@ -67,4 +79,13 @@ const secondaryCta = 'mailto:support@stackpine.com?subject=Tell%20Me%20How%20Sta
       </div>
     </section>
   </main>
+
+  <div class="fixed inset-x-0 bottom-0 z-40 border-t border-separator bg-background/95 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 sm:px-6" style="padding-bottom: max(0.75rem, env(safe-area-inset-bottom));">
+      <p class="text-xs sm:text-sm text-secondary">Need web development that converts paid traffic?</p>
+      <a href={primaryCta} class="inline-flex items-center justify-center rounded-full btn-primary px-4 py-2 text-xs sm:text-sm font-semibold text-white whitespace-nowrap">
+        Start A Project
+      </a>
+    </div>
+  </div>
 </Layout>
