@@ -4,255 +4,287 @@ import Layout from '../layouts/Layout.astro';
 const primaryCta = 'mailto:support@stackpine.com?subject=Build%20My%20Low-Ticket%20Funnel%20Website';
 const secondaryCta = 'mailto:support@stackpine.com?subject=Send%20Me%20The%20%2497%20Funnel%20Scope';
 
-const clarity = {
-  service: 'Low-Ticket Funnel Website Build',
+const offer = {
+  name: 'Low-Ticket Funnel Website Build',
   audience: 'Meta ad runners',
   price: '$97',
-  promise: 'A conversion-focused funnel website with clear ad-to-page congruence and low cognitive load.',
+  timeline: '48-hour first draft',
+  promise: 'A low-friction website flow built to match your ad promise and drive more buyers from paid clicks.',
+  deliverables: [
+    'Message-matched hero section and promise stack',
+    'Offer explanation in plain language with one clear decision path',
+    'Conversion-first section architecture for paid traffic',
+    'CTA hierarchy and objection handling sections',
+    'Build-ready copy and page structure your team can launch fast',
+  ],
 };
 
-const themes = [
+const chapterThemes = [
+  {
+    name: 'Attention and Relevance',
+    anchor: 'attention-and-relevance',
+    customerPain: 'Paid clicks bounce when the page feels disconnected from the ad.',
+    method: 'We build immediate relevance so visitors feel they are in the right place in under five seconds.',
+    impact: 'Lower friction at the top of the funnel and stronger intent into the first CTA.',
+  },
   {
     name: 'Offer Clarity',
-    problem: 'People do not buy when your offer feels vague.',
-    method: 'We tighten your message to one clear problem, one clear promise, and one clear CTA.',
-    gain: 'Visitors understand your offer in seconds.',
+    anchor: 'offer-clarity',
+    customerPain: 'People delay decisions when your offer sounds broad or abstract.',
+    method: 'We define one audience, one immediate problem, one mechanism, and one primary action.',
+    impact: 'More people understand your offer quickly and continue reading with confidence.',
   },
   {
-    name: 'Ad to Page Match',
-    problem: 'Meta ads lose money when page copy does not match ad intent.',
-    method: 'We align ad hook, headline, proof, and CTA language.',
-    gain: 'Clicks feel coherent and conversion gets easier.',
+    name: 'Conversion Architecture',
+    anchor: 'conversion-architecture',
+    customerPain: 'Traffic gets lost when section order does not support a buying decision.',
+    method: 'We structure each block to answer the next question a paid visitor naturally asks.',
+    impact: 'Clear momentum from headline to proof to action without cognitive overload.',
   },
   {
-    name: 'Low Cognitive Load UX',
-    problem: 'Too many choices create hesitation and drop-off.',
-    method: 'We design a guided flow with clean hierarchy and minimal decision friction.',
-    gain: 'Buyers move faster from interest to action.',
+    name: 'Ad to Page Congruence',
+    anchor: 'ad-to-page-congruence',
+    customerPain: 'Meta performance drops when click intent and landing message are inconsistent.',
+    method: 'We align language, emotional frame, and call-to-action between ad and page.',
+    impact: 'Better conversion quality because the journey feels coherent end to end.',
   },
   {
-    name: 'Conversion Copy',
-    problem: 'Generic copy attracts attention but not purchases.',
-    method: 'We write direct-response copy focused on pain, clarity, and believable outcomes.',
-    gain: 'More of your traffic turns into buyers.',
+    name: 'Decision Simplicity',
+    anchor: 'decision-simplicity',
+    customerPain: 'Too many options create hesitation and push warm visitors away.',
+    method: 'We remove non-essential choices and keep one clear action visible throughout the page.',
+    impact: 'Faster buying decisions with less confusion and fewer drop-offs.',
   },
   {
-    name: 'Checkout Confidence',
-    problem: 'Intent dies at checkout when trust is weak.',
-    method: 'We place proof, risk reversal, and value stack where decisions happen.',
-    gain: 'Checkout completion improves without gimmicks.',
+    name: 'Trust and Risk Reversal',
+    anchor: 'trust-and-risk-reversal',
+    customerPain: 'Buyers stall when they cannot quickly verify safety and credibility.',
+    method: 'We place trust signals, specificity, and risk reduction exactly where doubt appears.',
+    impact: 'More confident checkouts from traffic you already paid for.',
   },
   {
-    name: 'Economics and Break-Even',
-    problem: 'Scaling ads before math is stable creates expensive chaos.',
-    method: 'We build the funnel around CAC, CVR, AOV, and payback clarity.',
-    gain: 'You scale from economics, not emotion.',
+    name: 'Economics and Efficiency',
+    anchor: 'economics-and-efficiency',
+    customerPain: 'Scaling paid traffic without conversion clarity increases wasted spend.',
+    method: 'We design for better conversion efficiency so your funnel math is easier to manage.',
+    impact: 'Healthier CAC behavior and a cleaner path to stable growth.',
   },
   {
-    name: 'Post-Purchase Flow',
-    problem: 'Many buyers disappear after one purchase.',
-    method: 'We create simple follow-up paths that keep momentum after checkout.',
-    gain: 'Higher customer value and more repeat action.',
+    name: 'Execution Speed',
+    anchor: 'execution-speed',
+    customerPain: 'Slow website iteration delays learning and keeps campaigns expensive.',
+    method: 'We keep implementation simple so your team can launch and test quickly.',
+    impact: 'Faster feedback loops and faster improvement cycles.',
   },
   {
-    name: 'Testing Rhythm',
-    problem: 'Random changes make growth hard to trust.',
-    method: 'We prioritize tests based on conversion impact, not opinions.',
-    gain: 'A cleaner path to predictable improvement.',
-  },
-  {
-    name: 'Service Positioning',
-    problem: 'If everything sounds custom, nothing feels buyable.',
-    method: 'We package your low-ticket web build as a clear, easy-to-say-yes service.',
-    gain: 'Better offer fit for paid traffic audiences.',
+    name: 'Positioning and Market Fit',
+    anchor: 'positioning-and-market-fit',
+    customerPain: 'Generic pages fail to stand out in competitive ad feeds.',
+    method: 'We sharpen your angle and language so your page feels specific to your buyer.',
+    impact: 'Higher quality leads and a stronger first impression from cold traffic.',
   },
   {
     name: 'Scale Readiness',
-    problem: 'Funnels break when volume increases.',
-    method: 'We structure your pages and messaging to stay coherent under higher traffic.',
-    gain: 'More confidence when ad spend grows.',
+    anchor: 'scale-readiness',
+    customerPain: 'Funnels that work at small spend often break at larger volume.',
+    method: 'We build for consistency under pressure so your message holds when spend grows.',
+    impact: 'More confidence when increasing budget and pursuing volume.',
   },
 ];
 
-const lenses = [
+const sectionAngles = [
   {
-    label: 'What You Get',
-    text: 'A web development deliverable, not theory. You leave with a build-ready funnel website section set.',
+    title: 'The first five seconds',
+    customerView: 'I should instantly know this page is for me.',
+    buildFocus: 'Headline and subhead that mirror ad intent.',
+    action: 'Keep the opening sentence outcome-specific and concrete.',
   },
   {
-    label: 'Why It Converts',
-    text: 'Every block supports one decision path so buyers never wonder what to do next.',
+    title: 'One problem, one promise',
+    customerView: 'I want to know exactly what this solves right now.',
+    buildFocus: 'Single-problem framing and clear promise language.',
+    action: 'Avoid broad claims that increase doubt.',
   },
   {
-    label: 'Business Impact',
-    text: 'Higher funnel clarity usually means better conversion and healthier paid traffic economics.',
+    title: 'Simple mechanism',
+    customerView: 'Show me how this works without jargon.',
+    buildFocus: 'Step-by-step explanation with plain language.',
+    action: 'Use mechanism clarity to reduce hesitation.',
   },
   {
-    label: 'Speed to Launch',
-    text: 'Simple architecture means faster implementation and quicker feedback from real traffic.',
+    title: 'Visible next step',
+    customerView: 'I should never wonder what to do next.',
+    buildFocus: 'Primary CTA hierarchy and supportive transitions.',
+    action: 'Reinforce one main action across the full page.',
   },
   {
-    label: 'Best For',
-    text: 'Ad runners who want cleaner conversion, less message drift, and less wasted spend.',
+    title: 'Friction removal',
+    customerView: 'Do not make me work to understand the offer.',
+    buildFocus: 'Low cognitive load layout and concise section copy.',
+    action: 'Cut decorative complexity that slows decisions.',
   },
   {
-    label: 'Execution Style',
-    text: 'CMO strategy and CRO execution in one coherent website build process.',
+    title: 'Objection handling',
+    customerView: 'Answer my practical doubts before I ask.',
+    buildFocus: 'Risk reversal, specifics, and expectation setting.',
+    action: 'Resolve common objections near buying moments.',
   },
   {
-    label: 'Friction Removed',
-    text: 'We remove unnecessary sections, weak transitions, and confusing offer language.',
+    title: 'Proof positioning',
+    customerView: 'I need confidence this is credible and usable.',
+    buildFocus: 'Proof moments placed where uncertainty peaks.',
+    action: 'Tie each proof point to one buying concern.',
   },
   {
-    label: 'Decision Simplicity',
-    text: 'We keep one core promise visible across the full funnel so buyers stay oriented.',
+    title: 'Message consistency',
+    customerView: 'The page should feel consistent from top to bottom.',
+    buildFocus: 'Consistent language between ad hook and page blocks.',
+    action: 'Preserve emotional tone and promise coherence.',
   },
   {
-    label: 'Measurement Focus',
-    text: 'You can judge progress with clear conversion and efficiency metrics.',
+    title: 'Conversion momentum',
+    customerView: 'I want an easy path from interest to action.',
+    buildFocus: 'Sequential section flow that compounds intent.',
+    action: 'Design each block to earn the next scroll.',
   },
   {
-    label: 'Long-Term Value',
-    text: 'A coherent funnel website becomes a durable paid traffic asset, not a one-off page.',
+    title: 'Launch readiness',
+    customerView: 'I need something I can put live quickly.',
+    buildFocus: 'Build-ready website structure and implementation clarity.',
+    action: 'Prioritize speed to launch over unnecessary complexity.',
   },
 ];
 
-const sections = Array.from({ length: 100 }, (_, i) => {
+const salesSections = Array.from({ length: 100 }, (_, i) => {
   const id = i + 1;
-  const theme = themes[Math.floor(i / 10)];
-  const lens = lenses[i % 10];
+  const chapter = chapterThemes[Math.floor(i / 10)];
+  const angle = sectionAngles[i % 10];
 
   return {
     id,
-    theme,
-    lens,
-    title: `Section ${String(id).padStart(2, '0')}: ${theme.name}`,
-    lead: theme.problem,
-    method: theme.method,
-    gain: theme.gain,
+    chapter,
+    angle,
+    label: `Section ${String(id).padStart(2, '0')}`,
+    heading: `${chapter.name}: ${angle.title}`,
+    line1: chapter.customerPain,
+    line2: `${chapter.method} ${angle.buildFocus}`,
+    line3: `${chapter.impact} ${angle.action}`,
+    customerView: angle.customerView,
   };
 });
-
-const sectionGroups = Array.from({ length: 10 }, (_, i) => ({
-  label: `${i * 10 + 1}-${i * 10 + 10}`,
-  anchor: `section-${i * 10 + 1}`,
-  title: themes[i].name,
-}));
 ---
 
 <Layout
   title="Stackpine | Low-Ticket Funnel Website Build for Meta Ad Runners"
-  description="Stackpine builds low-ticket funnel websites for Meta ad runners with maximum offer clarity, low cognitive load, and conversion-first structure."
+  description="Stackpine builds low-ticket funnel websites for Meta ad runners with clear offer messaging, low cognitive load, and conversion-focused section flow."
 >
-  <header class="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-separator">
-    <nav class="max-w-5xl mx-auto px-6 h-14 flex items-center">
-      <a href="/" class="flex items-center gap-2 font-semibold">
-        <span class="size-6 rounded-full bg-black flex items-center justify-center text-white text-xs font-bold">S</span>
+  <header class="sticky top-0 z-50 bg-background/85 backdrop-blur-xl border-b border-separator">
+    <nav class="max-w-5xl mx-auto px-6 h-14 flex items-center gap-3">
+      <a href="/" class="flex items-center gap-2 font-semibold tracking-tight">
+        <span class="size-6 rounded-full bg-black text-white text-xs inline-flex items-center justify-center">S</span>
         <span>Stackpine</span>
       </a>
-      <span class="ml-3 text-tertiary text-xs sm:text-sm">CMO + CRO web development for paid traffic</span>
-      <a href={primaryCta} class="ml-auto text-sm px-4 h-8 rounded-lg font-medium btn-primary inline-flex items-center transition-colors">Hire Us</a>
+      <span class="text-xs sm:text-sm text-tertiary">CMO + CRO web development for paid traffic</span>
+      <a href={primaryCta} class="ml-auto text-sm px-4 h-8 rounded-full btn-primary font-medium inline-flex items-center">Hire Us</a>
     </nav>
   </header>
 
   <main class="max-w-5xl mx-auto px-6">
-    <section class="py-14 border-b border-separator">
-      <p class="text-sm font-semibold text-[rgb(17,168,255)] uppercase tracking-wide">Low-Ticket Service for Ad Runners</p>
-      <h1 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-        We build low-ticket funnel websites that make Meta ad traffic easier to convert.
+    <section class="py-16 sm:py-20 border-b border-separator">
+      <p class="text-xs sm:text-sm font-semibold text-[rgb(17,168,255)] uppercase tracking-[0.11em]">Built for Meta Ad Runners</p>
+      <h1 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.04] max-w-4xl">
+        We build low-ticket funnel websites that convert paid clicks into buyers.
       </h1>
-      <p class="mt-5 text-secondary text-base sm:text-lg max-w-4xl">
-        {clarity.service} for {clarity.audience}. {clarity.promise}
+      <p class="mt-6 text-base sm:text-lg text-secondary max-w-3xl">
+        {offer.name} for {offer.audience}. {offer.promise}
       </p>
-      <p class="mt-3 text-secondary text-base sm:text-lg max-w-4xl">
-        Customer-first focus: simple explanation, coherent flow, and conversion-driven web sections that help visitors buy without confusion.
+      <p class="mt-3 text-base sm:text-lg text-secondary max-w-3xl">
+        Front-end offer: {offer.price}. Delivery: {offer.timeline}. You get a clear, launch-ready website structure designed for ad-to-page congruence.
       </p>
-
-      <div class="mt-6 flex flex-wrap items-center gap-3 text-sm">
-        <span class="px-3 py-1.5 rounded-full border border-separator">Service: {clarity.service}</span>
-        <span class="px-3 py-1.5 rounded-full border border-separator">Audience: {clarity.audience}</span>
-        <span class="px-3 py-1.5 rounded-full border border-separator">Front-end offer: {clarity.price}</span>
-      </div>
-
-      <div class="mt-8 flex flex-wrap gap-2.5">
-        <a href={primaryCta} class="text-sm sm:text-base btn-primary font-semibold text-white px-7 py-3 rounded-xl tracking-[-0.0125em] inline-flex items-center justify-center transition-colors">
-          Hire Stackpine To Build Your Funnel
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href={primaryCta} class="text-sm sm:text-base btn-primary text-white px-7 py-3 rounded-full font-semibold inline-flex items-center justify-center">
+          Hire Stackpine
         </a>
-        <a href={secondaryCta} class="text-sm sm:text-base font-semibold px-7 py-3 rounded-xl bg-white tracking-[-0.0125em] inline-flex items-center gap-2 border border-separator hover:bg-black/5 transition-colors">
-          Send Me The {clarity.price} Scope
+        <a href={secondaryCta} class="text-sm sm:text-base px-7 py-3 rounded-full bg-white border border-separator font-semibold hover:bg-black/5 transition-colors inline-flex items-center justify-center">
+          Send Me The {offer.price} Scope
         </a>
       </div>
     </section>
 
-    <section class="py-8 border-b border-separator">
-      <p class="font-medium text-sm">Jump by phase</p>
-      <div class="mt-3 flex flex-wrap gap-2">
-        {sectionGroups.map((group) => (
-          <a href={`#${group.anchor}`} class="text-sm px-3 py-1.5 rounded-full border border-separator hover:bg-black/5 transition-colors">
-            {group.label} · {group.title}
+    <section class="py-14 border-b border-separator">
+      <h2 class="text-2xl sm:text-3xl font-semibold tracking-tight">What you get in the front-end build</h2>
+      <ul class="mt-6 space-y-4 max-w-3xl">
+        {offer.deliverables.map((item) => (
+          <li class="text-base sm:text-lg text-secondary leading-relaxed">{item}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="py-10 border-b border-separator">
+      <p class="text-sm font-medium">Navigate the sales narrative</p>
+      <div class="mt-4 flex flex-wrap gap-2.5">
+        {chapterThemes.map((theme, index) => (
+          <a
+            href={`#section-${index * 10 + 1}`}
+            class="text-xs sm:text-sm px-3 py-1.5 rounded-full border border-separator hover:bg-black/5 transition-colors"
+          >
+            {index * 10 + 1}-{index * 10 + 10} · {theme.name}
           </a>
         ))}
       </div>
     </section>
 
     <section>
-      {sections.map((s) => (
-        <section id={`section-${s.id}`} class="py-12 border-b border-separator last:border-b-0">
+      {salesSections.map((section, i) => (
+        <section id={`section-${section.id}`} class="py-12 sm:py-14 border-b border-separator last:border-b-0">
           <div class="flex items-center justify-between gap-3">
-            <p class="text-xs uppercase tracking-wide text-tertiary font-semibold">{s.theme.name} · {String(s.id).padStart(2, '0')}</p>
-            <a href={primaryCta} class="text-xs sm:text-sm text-[rgb(17,168,255)] font-medium hover:opacity-70 transition-opacity">Hire us for this</a>
+            <p class="text-xs uppercase tracking-[0.1em] text-tertiary font-semibold">{section.label}</p>
+            <a href={primaryCta} class="text-xs sm:text-sm text-[rgb(17,168,255)] font-medium hover:opacity-70 transition-opacity">Build this for me</a>
           </div>
 
-          <h2 class="mt-3 text-2xl sm:text-3xl font-bold tracking-tight">{s.title}</h2>
-          <p class="mt-4 text-secondary text-base sm:text-lg max-w-3xl">{s.lead}</p>
-          <p class="mt-2 text-secondary text-base sm:text-lg max-w-3xl">{s.method}</p>
-          <p class="mt-2 text-secondary text-base sm:text-lg max-w-3xl">{s.gain}</p>
+          <h3 class="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight max-w-4xl">{section.heading}</h3>
+          <p class="mt-5 text-base sm:text-lg text-secondary max-w-3xl">{section.line1}</p>
+          <p class="mt-2 text-base sm:text-lg text-secondary max-w-3xl">{section.line2}</p>
+          <p class="mt-2 text-base sm:text-lg text-secondary max-w-3xl">{section.line3}</p>
 
-          <div class="mt-5 grid md:grid-cols-3 gap-5">
-            <div>
-              <p class="text-xs uppercase tracking-wide text-tertiary">Offer</p>
-              <p class="mt-1 text-sm">{clarity.service}</p>
-            </div>
-            <div>
-              <p class="text-xs uppercase tracking-wide text-tertiary">Customer Lens</p>
-              <p class="mt-1 text-sm text-secondary">{s.lens.label}: {s.lens.text}</p>
-            </div>
-            <div>
-              <p class="text-xs uppercase tracking-wide text-tertiary">Outcome</p>
-              <p class="mt-1 text-sm">{clarity.outcome}</p>
-            </div>
-          </div>
+          <p class="mt-5 text-sm sm:text-base max-w-3xl">
+            <span class="font-semibold">Customer viewpoint:</span> {section.customerView}
+          </p>
 
-          {s.id % 5 === 0 && (
-            <div class="mt-6 flex flex-wrap gap-2.5">
-              <a href={primaryCta} class="text-sm btn-primary text-white px-5 py-2.5 rounded-lg inline-flex">Hire Stackpine</a>
-              <a href={secondaryCta} class="text-sm px-5 py-2.5 rounded-lg border border-separator bg-white hover:bg-black/5 inline-flex">Get The Scope</a>
+          {(i + 1) % 5 === 0 && (
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a href={primaryCta} class="text-sm btn-primary text-white px-5 py-2.5 rounded-full font-semibold inline-flex">Hire Stackpine</a>
+              <a href={secondaryCta} class="text-sm px-5 py-2.5 rounded-full border border-separator bg-white font-semibold hover:bg-black/5 transition-colors inline-flex">
+                Get Scope
+              </a>
             </div>
           )}
         </section>
       ))}
     </section>
 
-    <section class="py-14 border-t border-separator">
-      <p class="text-[rgb(17,168,255)] font-semibold uppercase tracking-wide text-sm">Final CTA</p>
-      <h2 class="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">Ready for a clearer, more coherent funnel website?</h2>
-      <p class="mt-4 text-secondary text-base sm:text-lg max-w-3xl">
-        If you run Meta ads and want more low-ticket buyers through simpler website decisions, we can build it for you.
+    <section class="py-16 border-t border-separator">
+      <p class="text-xs sm:text-sm font-semibold text-[rgb(17,168,255)] uppercase tracking-[0.11em]">Final CTA</p>
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight max-w-4xl">
+        If you want more buyers from Meta ads, start with a clearer funnel website.
+      </h2>
+      <p class="mt-5 text-base sm:text-lg text-secondary max-w-3xl">
+        You bring the traffic. We build the website structure and copy flow that turns that traffic into low-ticket buyers with less friction.
       </p>
-      <div class="mt-6 flex flex-wrap gap-2.5">
-        <a href={primaryCta} class="text-sm sm:text-base btn-primary font-semibold text-white px-7 py-3 rounded-xl tracking-[-0.0125em] inline-flex items-center justify-center transition-colors">
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href={primaryCta} class="text-sm sm:text-base btn-primary text-white px-7 py-3 rounded-full font-semibold inline-flex items-center justify-center">
           Hire Stackpine Now
         </a>
-        <a href={secondaryCta} class="text-sm sm:text-base font-semibold px-7 py-3 rounded-xl bg-white tracking-[-0.0125em] inline-flex items-center gap-2 border border-separator hover:bg-black/5 transition-colors">
+        <a href={secondaryCta} class="text-sm sm:text-base px-7 py-3 rounded-full border border-separator bg-white font-semibold hover:bg-black/5 transition-colors inline-flex items-center justify-center">
           Send Me The Scope
         </a>
       </div>
     </section>
   </main>
 
-  <footer class="w-full py-10">
-    <div class="max-w-5xl px-6 mx-auto border-t border-separator pt-8 flex flex-col sm:flex-row justify-between gap-4">
-      <span class="text-secondary text-sm">© {new Date().getFullYear()} Stackpine</span>
+  <footer class="py-10 border-t border-separator">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5">
+      <p class="text-sm text-secondary">© {new Date().getFullYear()} Stackpine</p>
       <a href="mailto:support@stackpine.com" class="text-sm font-medium hover:opacity-70 transition-opacity">support@stackpine.com</a>
     </div>
   </footer>
