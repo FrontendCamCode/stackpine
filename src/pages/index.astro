@@ -2,263 +2,198 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="The Site Launch Kit — Build Your Custom Website in 2 Hours | Stackpine">
-
-  <!-- Top Bar -->
+<Layout
+  title="Stackpine | Web Development Agency That Builds Sites Clients Actually Buy From"
+  description="Stackpine is a web development agency for service businesses and startups. We design, build, and launch high-converting websites that turn visitors into booked calls and paying clients."
+>
   <div class="bg-gray-950 border-b border-gray-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-12 flex items-center justify-between text-sm">
-      <a href="tel:+1234567890" class="text-gray-400 hover:text-white flex items-center gap-2">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between text-sm">
+      <a href="tel:+1234567890" class="text-gray-400 hover:text-white hidden sm:flex items-center gap-2">
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-        <span class="hidden sm:inline">Order By Phone</span>
+        <span>Book by Phone</span>
       </a>
       <a href="/" class="text-lg font-bold tracking-tight">
         <span class="text-white">Stack</span><span class="text-emerald-400">pine</span>
       </a>
-      <a href="mailto:support@stackpine.com" class="text-gray-400 hover:text-white text-xs sm:text-sm">
-        support@stackpine.com
+      <a href="mailto:support@stackpine.com?subject=Project%20Inquiry%20-%20Stackpine" class="text-emerald-300 hover:text-emerald-200 text-xs sm:text-sm font-semibold">
+        Start a Project
       </a>
     </div>
   </div>
 
-  <!-- Hero Headline -->
   <section class="relative overflow-hidden">
-    <!-- Gradient background -->
     <div class="absolute inset-0 bg-gradient-to-b from-emerald-950/40 via-gray-950 to-gray-950"></div>
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-emerald-600/10 rounded-full blur-3xl"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[860px] h-[420px] bg-emerald-500/15 rounded-full blur-3xl"></div>
 
-    <div class="relative pt-12 pb-8 px-4 sm:px-6 text-center">
-      <p class="text-emerald-400 text-sm font-semibold tracking-wide uppercase flex items-center justify-center gap-2">
-        <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-        For Anyone Looking To Launch Their Business Online
-      </p>
-      <h1 class="mt-5 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] max-w-5xl mx-auto">
-        "New Kit Reveals A Counterintuitive Approach That
-        <span class="text-emerald-400"> Gets Your Custom Website Live In 2 Hours</span>
-        Without Writing Code"
-      </h1>
-      <p class="mt-5 text-gray-400 text-base sm:text-lg max-w-3xl mx-auto">
-        While also giving you a conversion-optimized foundation, enterprise-grade hosting, and AI-powered customization
-      </p>
+    <div class="relative px-4 sm:px-6 pt-16 pb-14">
+      <div class="max-w-6xl mx-auto text-center">
+        <p class="text-emerald-400 text-sm font-semibold tracking-wide uppercase inline-flex items-center gap-2">
+          <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+          Web Development Agency
+        </p>
+        <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.05] tracking-tight">
+          We Build Websites That Turn
+          <span class="text-emerald-400"> Traffic Into Clients</span>
+        </h1>
+        <p class="mt-6 text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
+          Stackpine helps service businesses, founders, and local brands launch fast, modern websites focused on one outcome: more qualified inquiries and more closed deals.
+        </p>
+
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+          <a href="mailto:support@stackpine.com?subject=Project%20Inquiry%20-%20Stackpine" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold">
+            Book a Discovery Call
+          </a>
+          <a href="#services" class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-gray-700 hover:border-gray-500 text-white font-semibold">
+            View Services
+          </a>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
+          <div class="rounded-xl border border-gray-800 bg-gray-900/70 p-4">
+            <p class="text-2xl font-extrabold text-white">2-6 Weeks</p>
+            <p class="text-gray-400 text-sm mt-1">Typical launch timeline</p>
+          </div>
+          <div class="rounded-xl border border-gray-800 bg-gray-900/70 p-4">
+            <p class="text-2xl font-extrabold text-white">Conversion First</p>
+            <p class="text-gray-400 text-sm mt-1">Built for lead generation and sales</p>
+          </div>
+          <div class="rounded-xl border border-gray-800 bg-gray-900/70 p-4">
+            <p class="text-2xl font-extrabold text-white">Custom Build</p>
+            <p class="text-gray-400 text-sm mt-1">No cookie-cutter templates</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Two Column: Video + Order Box -->
+  <section id="services" class="px-4 sm:px-6 pb-16">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <p class="text-emerald-400 text-sm font-semibold tracking-wide uppercase">Services</p>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold">What We Can Build For Your Business</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <article class="rounded-2xl border border-gray-800 bg-gray-900 p-6">
+          <h3 class="text-xl font-bold">Lead Generation Websites</h3>
+          <p class="text-gray-400 mt-3 text-sm leading-relaxed">
+            Conversion-focused websites for agencies, consultants, contractors, and local businesses that need more booked calls.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-300">
+            <li>Landing page architecture</li>
+            <li>Offer and CTA positioning</li>
+            <li>Fast performance and SEO setup</li>
+          </ul>
+        </article>
+
+        <article class="rounded-2xl border border-gray-800 bg-gray-900 p-6">
+          <h3 class="text-xl font-bold">Business Website Redesigns</h3>
+          <p class="text-gray-400 mt-3 text-sm leading-relaxed">
+            Rebuild outdated websites into modern, high-trust brand experiences that make it easier for prospects to say yes.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-300">
+            <li>Messaging and structure refresh</li>
+            <li>Modern UI and mobile optimization</li>
+            <li>Analytics and conversion tracking</li>
+          </ul>
+        </article>
+
+        <article class="rounded-2xl border border-gray-800 bg-gray-900 p-6">
+          <h3 class="text-xl font-bold">Ongoing Growth Support</h3>
+          <p class="text-gray-400 mt-3 text-sm leading-relaxed">
+            Monthly iteration for businesses that want continuous improvements, testing, and campaign landing pages.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-300">
+            <li>A/B test-ready landing pages</li>
+            <li>Content and section updates</li>
+            <li>Priority technical support</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="px-4 sm:px-6 pb-16">
     <div class="max-w-7xl mx-auto grid lg:grid-cols-5 gap-8 items-start">
-
-      <!-- Left: Video -->
       <div class="lg:col-span-3">
-        <div class="relative rounded-xl overflow-hidden bg-gray-900 border border-gray-800 aspect-video">
-          <!-- Video placeholder -->
-          <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-950">
-            <div class="text-center">
-              <button class="w-20 h-20 bg-emerald-600/20 hover:bg-emerald-600/30 border-2 border-emerald-500 rounded-full flex items-center justify-center transition-colors mx-auto">
-                <svg class="w-8 h-8 text-emerald-400 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-              </button>
-            </div>
+        <p class="text-emerald-400 text-sm font-semibold tracking-wide uppercase">How it works</p>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold">A Clear Process From Brief To Launch</h2>
+
+        <div class="mt-8 space-y-4">
+          <div class="rounded-xl border border-gray-800 bg-gray-900 p-5">
+            <p class="text-sm text-emerald-300 font-semibold">Step 1</p>
+            <h3 class="mt-1 text-lg font-bold">Discovery and Offer Strategy</h3>
+            <p class="text-gray-400 mt-2 text-sm">We define your audience, offer, and the exact conversion path your website should drive.</p>
           </div>
-          <!-- "Click to turn on sound" badge -->
-          <div class="absolute top-4 left-4 bg-gray-900/80 backdrop-blur text-white text-xs font-medium px-3 py-1.5 rounded-full flex items-center gap-2">
-            <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
-            CLICK TO TURN ON SOUND
+          <div class="rounded-xl border border-gray-800 bg-gray-900 p-5">
+            <p class="text-sm text-emerald-300 font-semibold">Step 2</p>
+            <h3 class="mt-1 text-lg font-bold">Design and Messaging</h3>
+            <p class="text-gray-400 mt-2 text-sm">We create page structure, copy direction, and visual design aligned to your brand and sales goals.</p>
           </div>
-          <!-- Video controls bar -->
-          <div class="absolute bottom-0 left-0 right-0 bg-gray-900/90 backdrop-blur px-4 py-3 flex items-center gap-3">
-            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-            <span class="text-xs text-gray-400">00:00</span>
-            <div class="flex-1 h-1 bg-gray-700 rounded-full">
-              <div class="h-1 bg-emerald-500 rounded-full w-0"></div>
-            </div>
-            <svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-            <svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" /></svg>
+          <div class="rounded-xl border border-gray-800 bg-gray-900 p-5">
+            <p class="text-sm text-emerald-300 font-semibold">Step 3</p>
+            <h3 class="mt-1 text-lg font-bold">Build and QA</h3>
+            <p class="text-gray-400 mt-2 text-sm">Your site is developed on a fast modern stack, then tested across devices for speed and reliability.</p>
+          </div>
+          <div class="rounded-xl border border-gray-800 bg-gray-900 p-5">
+            <p class="text-sm text-emerald-300 font-semibold">Step 4</p>
+            <h3 class="mt-1 text-lg font-bold">Launch and Growth</h3>
+            <p class="text-gray-400 mt-2 text-sm">We launch, set up analytics, and give you a roadmap to keep improving conversion after go-live.</p>
           </div>
         </div>
       </div>
 
-      <!-- Right: Order Box -->
-      <div class="lg:col-span-2">
-        <div class="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden">
-          <!-- Header -->
-          <div class="bg-emerald-900/30 border-b border-emerald-800/50 px-6 py-4 text-center">
-            <p class="text-emerald-400 text-xs font-bold tracking-widest uppercase">Now Available For Instant Digital Download</p>
-          </div>
-
-          <div class="p-6 space-y-5">
-            <!-- Product mockup placeholder -->
-            <div class="flex justify-center gap-3">
-              <div class="w-20 h-24 bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-lg flex items-center justify-center border border-emerald-600/30">
-                <span class="text-[10px] text-emerald-200 font-bold text-center leading-tight px-1">SITE<br/>LAUNCH<br/>KIT</span>
-              </div>
-              <div class="w-20 h-24 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg flex items-center justify-center border border-gray-600/30 -rotate-3">
-                <span class="text-[10px] text-gray-300 font-bold text-center leading-tight px-1">CLAUDE<br/>.md<br/>PROMPTS</span>
-              </div>
-              <div class="w-20 h-24 bg-gradient-to-br from-emerald-800 to-gray-900 rounded-lg flex items-center justify-center border border-emerald-700/30 rotate-3">
-                <span class="text-[10px] text-emerald-200 font-bold text-center leading-tight px-1">DEPLOY<br/>CHECK<br/>LIST</span>
-              </div>
-            </div>
-
-            <!-- Pricing -->
-            <div class="text-center">
-              <p class="text-gray-400 text-xs font-semibold tracking-wide uppercase">Only A Few Days Left</p>
-              <div class="mt-2 flex items-center justify-center gap-3">
-                <span class="text-red-400 line-through text-lg">$327.00</span>
-                <span class="text-emerald-400 text-3xl font-extrabold">$27.00</span>
-              </div>
-              <p class="text-white font-semibold mt-1">Save $300.00 today</p>
-              <p class="text-gray-400 text-sm mt-2">Download The Kit For <span class="line-through">$327</span> Just $27.00!<br/>Delivered instantly. Start building in the next 2 minutes.</p>
-              <p class="text-gray-500 text-xs mt-2">Now available for instant download</p>
-            </div>
-
-            <!-- Form -->
-            <form class="space-y-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                class="w-full px-4 py-3 bg-gray-950 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-                required
-              />
-              <input
-                type="tel"
-                placeholder="Phone number (for bonuses)"
-                class="w-full px-4 py-3 bg-gray-950 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-              />
-              <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-lg py-4 rounded-lg transition-colors flex items-center justify-center gap-3 group">
-                <span>
-                  <span class="block text-lg">GO TO STEP #2</span>
-                  <span class="block text-xs font-normal opacity-80">Get Your Site Launch Kit Now!</span>
-                </span>
-                <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
-              </button>
-            </form>
-
-            <!-- Trust badges -->
-            <div class="text-center space-y-4">
-              <p class="text-gray-400 text-xs flex items-center justify-center gap-1.5">
-                <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                100% Secure Checkout by Stripe
-              </p>
-
-              <!-- Guarantee badge -->
-              <div class="flex items-center gap-3 bg-gray-950 border border-gray-800 rounded-lg p-3">
-                <div class="flex-shrink-0 w-12 h-12 bg-emerald-900/50 rounded-full flex items-center justify-center">
-                  <span class="text-emerald-400 text-xs font-bold">100%</span>
-                </div>
-                <p class="text-xs text-gray-400 text-left">
-                  <span class="text-white font-semibold">Backed by our 30-day money back guarantee.</span> You'll love the kit or we'll give you your money back AND let you keep everything.
-                </p>
-              </div>
-
-              <!-- Reviews -->
-              <div>
-                <p class="text-gray-400 text-sm">Excellent based on <span class="text-white underline">456 reviews</span></p>
-                <div class="flex justify-center gap-1 mt-1">
-                  <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                </div>
-              </div>
-            </div>
-          </div>
+      <aside class="lg:col-span-2 space-y-4">
+        <div class="rounded-2xl border border-emerald-800/40 bg-emerald-900/20 p-6">
+          <p class="text-emerald-300 text-xs uppercase tracking-wide font-semibold">Investment Snapshot</p>
+          <h3 class="mt-2 text-2xl font-extrabold">Projects Starting at $3,500</h3>
+          <p class="text-gray-300 mt-3 text-sm leading-relaxed">
+            Final pricing depends on scope, number of pages, integrations, and timeline. Most clients choose either a focused launch package or a full website rebuild.
+          </p>
+          <a href="mailto:support@stackpine.com?subject=Pricing%20Request%20-%20Stackpine" class="mt-5 inline-flex items-center justify-center w-full px-4 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold">
+            Request Proposal
+          </a>
         </div>
+
+        <div class="rounded-2xl border border-gray-800 bg-gray-900 p-6">
+          <p class="text-gray-200 font-semibold">Who We Work With</p>
+          <ul class="mt-3 space-y-2 text-sm text-gray-400">
+            <li>Service businesses and agencies</li>
+            <li>Early-stage SaaS and startup teams</li>
+            <li>Local companies upgrading old websites</li>
+            <li>Founders launching new offers</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl border border-gray-800 bg-gray-900 p-6">
+          <p class="text-gray-200 font-semibold">Tech Stack</p>
+          <p class="text-gray-400 mt-3 text-sm">
+            Astro, Tailwind, and Cloudflare deployment for fast load times, strong reliability, and low ongoing maintenance.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="px-4 sm:px-6 pb-20">
+    <div class="max-w-5xl mx-auto rounded-2xl border border-gray-800 bg-gray-900 p-8 sm:p-10 text-center">
+      <p class="text-emerald-400 text-sm font-semibold tracking-wide uppercase">Ready to sell with your website?</p>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold">Let’s Build Your Next Revenue-Generating Site</h2>
+      <p class="mt-4 text-gray-300 max-w-2xl mx-auto">
+        Tell us about your business, your offer, and your timeline. We will reply with a practical plan and next steps.
+      </p>
+
+      <div class="mt-7 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="mailto:support@stackpine.com?subject=New%20Web%20Project%20-%20Stackpine" class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold">
+          Email Stackpine
+        </a>
+        <a href="tel:+1234567890" class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-gray-700 hover:border-gray-500 text-white font-semibold">
+          Call for a Quick Intro
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- What Is Section + Testimonials -->
-  <section class="px-4 sm:px-6 pb-24">
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-5 gap-8 items-start">
-
-      <!-- Left: What is the Site Launch Kit? -->
-      <div class="lg:col-span-3 space-y-6">
-        <p class="text-emerald-400 text-sm font-semibold tracking-wide uppercase">Here's what you're getting...</p>
-        <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">
-          What is the <span class="text-emerald-400">Site Launch Kit</span>?
-        </h2>
-
-        <p class="text-gray-300 text-lg leading-relaxed">
-          The Site Launch Kit is a counterintuitive approach to getting a professional, custom-coded marketing website live — that allows you to skip the $5,000 developer quotes and the months of back-and-forth — without writing a single line of code yourself.
-        </p>
-
-        <p class="text-gray-300 text-lg leading-relaxed">
-          We achieve this by giving you a battle-tested website template built on the same stack used by companies doing millions in revenue, paired with AI prompts that do all the customization for you — without needing to learn HTML, CSS, JavaScript, or any other programming language.
-        </p>
-
-        <p class="text-gray-300 text-lg leading-relaxed">
-          And as a result... this frees you up to focus on what actually matters — your product, your customers, and your growth — instead of spending weeks fighting with website builders or waiting on developers. This is the Site Launch Kit.
-        </p>
-
-        <p class="text-gray-300 text-lg leading-relaxed">
-          You'll get a conversion-optimized Astro template that deploys to Cloudflare in minutes. Unlimited bandwidth. Enterprise-grade security. The kind of infrastructure that costs companies thousands per month — and you'll have it running for free.
-        </p>
-
-        <p class="text-gray-300 text-lg leading-relaxed">
-          The included CLAUDE.md prompt file turns Claude Code into your personal web developer. Just tell it about your business — "I run a dog grooming shop in Austin" or "I'm launching a SaaS for dentists" — and it rewrites everything. Copy, colors, layout, sections. All of it. Customized to you.
-        </p>
-
-        <p class="text-gray-300 text-lg leading-relaxed">
-          The 2-hour walkthrough video holds your hand through every step. Install the tools. Clone the template. Customize with AI. Deploy to your domain. By the time you're done, you'll have a live website that looks like you paid $5,000 for it. And you'll have built it yourself.
-        </p>
-      </div>
-
-      <!-- Right: Testimonial Cards -->
-      <div class="lg:col-span-2 space-y-4">
-        <!-- Testimonial 1 -->
-        <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
-          <div class="p-4">
-            <p class="text-emerald-400 text-xs font-semibold">"Best Website Launch Ever</p>
-            <p class="text-white text-sm font-bold">Had My Site Live In The Last 90 Minutes"</p>
-          </div>
-          <div class="flex items-center justify-between px-4 pb-4">
-            <div>
-              <p class="text-emerald-400 text-sm font-bold">Sarah M.</p>
-              <p class="text-gray-500 text-xs">A Site Launch Kit Customer</p>
-            </div>
-            <button class="w-10 h-10 bg-emerald-600/20 border border-emerald-600/40 rounded-full flex items-center justify-center hover:bg-emerald-600/30 transition-colors">
-              <svg class="w-4 h-4 text-emerald-400 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- Testimonial 2 -->
-        <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
-          <div class="p-4">
-            <p class="text-emerald-400 text-xs font-semibold">"Best Investment I've Made</p>
-            <p class="text-white text-sm font-bold">Saved $4,000 On Developer Costs"</p>
-          </div>
-          <div class="flex items-center justify-between px-4 pb-4">
-            <div>
-              <p class="text-emerald-400 text-sm font-bold">James R.</p>
-              <p class="text-gray-500 text-xs">A Site Launch Kit Customer</p>
-            </div>
-            <button class="w-10 h-10 bg-emerald-600/20 border border-emerald-600/40 rounded-full flex items-center justify-center hover:bg-emerald-600/30 transition-colors">
-              <svg class="w-4 h-4 text-emerald-400 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden">
-          <div class="p-4">
-            <p class="text-emerald-400 text-xs font-semibold">"Best Template I've Used</p>
-            <p class="text-white text-sm font-bold">Already Getting Leads In The First Week"</p>
-          </div>
-          <div class="flex items-center justify-between px-4 pb-4">
-            <div>
-              <p class="text-emerald-400 text-sm font-bold">Mike T.</p>
-              <p class="text-gray-500 text-xs">A Site Launch Kit Customer</p>
-            </div>
-            <button class="w-10 h-10 bg-emerald-600/20 border border-emerald-600/40 rounded-full flex items-center justify-center hover:bg-emerald-600/30 transition-colors">
-              <svg class="w-4 h-4 text-emerald-400 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer (temporary) -->
   <footer class="border-t border-gray-800 py-10 px-6">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <span class="text-sm text-gray-500">&copy; {new Date().getFullYear()} Stackpine. All rights reserved.</span>
