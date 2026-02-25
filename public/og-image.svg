@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Stackpine Open Graph Image</title>
+  <desc id="desc">Stackpine Conversion Focussed Web Development</desc>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1080" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFF"/>
+      <stop offset="1" stop-color="#EEF4FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="180" y1="120" x2="1020" y2="510" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F80F5"/>
+      <stop offset="1" stop-color="#1255AE"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="84" y="84" width="1032" height="462" rx="32" fill="white" stroke="#E4EBF8"/>
+
+  <rect x="132" y="132" width="64" height="64" rx="18" fill="url(#accent)"/>
+  <path d="M149 146h23c10 0 16 6 16 14c0 6 -4 11 -9 13c7 2 11 7 11 14c0 9 -7 15 -17 15h-24v-56Zm13 11v11h9c4 0 7 -2 7 -5c0 -4 -3 -6 -7 -6h-9Zm0 22v12h10c4 0 7 -2 7 -6c0 -4 -3 -6 -7 -6h-10Z" fill="white"/>
+
+  <text x="220" y="172" fill="#111111" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="700">Stackpine</text>
+  <text x="132" y="258" fill="#111111" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="700">Conversion Focussed</text>
+  <text x="132" y="334" fill="#111111" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="700">Web Development</text>
+
+  <text x="132" y="408" fill="#4A4A4A" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="500">Built for teams running paid traffic</text>
+  <text x="132" y="454" fill="#4A4A4A" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="500">that want more qualified leads and customers.</text>
+
+  <rect x="132" y="488" width="350" height="48" rx="24" fill="#1F80F5"/>
+  <text x="162" y="520" fill="white" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">stackpine.com</text>
+</svg>
