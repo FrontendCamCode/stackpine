@@ -1,19 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const primaryCta = 'mailto:support@stackpine.com?subject=Start%20My%20Landing%20Page%20Build';
-const secondaryCta = 'mailto:support@stackpine.com?subject=Send%20Me%20The%20Offer%20Details';
-
-const bullets = [
-  'Framer landing page built for cold Meta ad traffic',
-  'Clear message match from ad click to on-page offer',
-  'Low-friction layout focused on leads, buyers, or booked calls',
-];
+const primaryCta = 'mailto:support@stackpine.com?subject=Start%20A%20Project%20With%20Stackpine';
+const secondaryCta = 'mailto:support@stackpine.com?subject=Tell%20Me%20How%20Stackpine%20Works';
 ---
 
 <Layout
-  title="Stackpine | Meta Landing Page Offer"
-  description="Stackpine builds conversion-focused Framer landing pages for Meta ad traffic."
+  title="Stackpine | Web Development For Performance Growth"
+  description="Stackpine is a web development partner for brands that need better conversion from paid traffic."
 >
   <main class="min-h-[100svh] flex items-center">
     <section class="w-full">
@@ -21,29 +15,55 @@ const bullets = [
         <p class="text-xs sm:text-sm font-semibold uppercase tracking-[0.13em] text-[rgb(17,168,255)]">Stackpine · CMO + CRO Web Development</p>
 
         <h1 class="mt-4 max-w-4xl text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.03]">
-          Your Meta ads are working. Your landing page is not.
+          Your Meta ads are working. Your website should work just as hard.
         </h1>
 
         <p class="mt-6 max-w-3xl text-base sm:text-xl text-secondary">
-          We build Framer landing pages engineered to convert paid traffic with clear offer messaging, low cognitive load, and one decisive action path.
+          We design and build conversion-focused web experiences for teams running paid traffic. Our edge is simple: strategy, messaging,
+          and development are built as one system.
         </p>
 
-        <ul class="mt-8 space-y-2.5 max-w-3xl">
-          {bullets.map((bullet) => (
-            <li class="text-sm sm:text-base text-secondary">{bullet}</li>
-          ))}
-        </ul>
+        <div class="mt-8 grid max-w-4xl gap-4 sm:grid-cols-3">
+          <div class="flex gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icons-tabler-outline icon-tabler-target-arrow mt-0.5 shrink-0" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              <path d="M12 7a5 5 0 1 0 5 5" />
+              <path d="M13.5 3h7.5v7.5" />
+              <path d="M21 3l-9 9" />
+            </svg>
+            <p class="text-sm sm:text-base text-secondary">Message-to-market clarity from click to conversion action.</p>
+          </div>
+
+          <div class="flex gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icons-tabler-outline icon-tabler-code mt-0.5 shrink-0" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M7 8l-4 4l4 4" />
+              <path d="M17 8l4 4l-4 4" />
+              <path d="M14 4l-4 16" />
+            </svg>
+            <p class="text-sm sm:text-base text-secondary">Web development across landing pages, websites, and funnel flows.</p>
+          </div>
+
+          <div class="flex gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icons-tabler-outline icon-tabler-bolt mt-0.5 shrink-0" width="22" height="22" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M13 2l-8 12h6l-2 8l8 -12h-6l2 -8" />
+            </svg>
+            <p class="text-sm sm:text-base text-secondary">Built for fast iteration so your team can launch and improve continuously.</p>
+          </div>
+        </div>
 
         <div class="mt-8 flex flex-wrap gap-3">
           <a href={primaryCta} class="inline-flex items-center justify-center rounded-full btn-primary px-7 py-3 text-sm sm:text-base font-semibold text-white">
-            Start Your Build
+            Start A Project
           </a>
           <a href={secondaryCta} class="inline-flex items-center justify-center rounded-full border border-separator bg-white px-7 py-3 text-sm sm:text-base font-semibold transition-colors hover:bg-black/5">
-            Get Offer Details
+            See How We Work
           </a>
         </div>
 
-        <p class="mt-4 text-xs sm:text-sm text-tertiary">Typical first draft in 5-7 business days.</p>
+        <p class="mt-4 text-xs sm:text-sm text-tertiary">Scoped to your goals, stage, and budget.</p>
       </div>
     </section>
   </main>
