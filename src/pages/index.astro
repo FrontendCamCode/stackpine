@@ -1,270 +1,257 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const primaryCta = 'mailto:support@stackpine.com?subject=Build%20My%20Low-Ticket%20Funnel';
-const offerName = 'Funnel Trojan Front-End Sprint';
-const offerPrice = '$97';
+const primaryCta = 'mailto:support@stackpine.com?subject=I%20Want%20Stackpine%20To%20Build%20My%20Funnel';
+const secondaryCta = 'mailto:support@stackpine.com?subject=Send%20Me%20The%20%2497%20Low-Ticket%20Funnel%20Offer';
+const clarity = {
+  service: 'Low-Ticket Funnel Website Build',
+  audience: 'Meta Ad runners',
+  outcome: 'More low-ticket buyers, stronger unit economics, and clearer sales flow',
+  method: 'Conversion-driven web development with ad-to-page congruence',
+};
 
-const phaseBuckets = [
+const lowTicketOffer = {
+  name: 'Ad Runner Low-Ticket Funnel Blueprint',
+  price: '$97',
+  who: 'Founders, agencies, and service businesses running or preparing to run Meta Ads',
+  promise: 'One low-cognitive-load funnel website that can break even fast and convert cold paid traffic into buyers',
+};
+
+const phases = [
   {
-    label: 'Offer Foundation',
-    kicker: 'Positioning',
-    problem: 'they sell too many outcomes at once and confuse cold traffic',
-    shift: 'one clear low-ticket offer with one painful problem and one immediate win',
-    mechanic: 'single-offer clarity and one CTA from headline to checkout',
+    name: 'Offer Clarity',
+    promise: 'Explain the offer in seconds',
+    pain: 'cold traffic bounces because your offer feels complicated',
+    mechanism: 'single-problem framing + one CTA path',
   },
   {
-    label: 'Audience and Pain Match',
-    kicker: 'Message Market Match',
-    problem: 'their ad message and landing page language do not match buyer pain',
-    shift: 'ad copy and page copy use the same pain language and same promise',
-    mechanic: 'pain-first copy and direct response framing',
+    name: 'Message Match',
+    promise: 'Align ad copy to landing copy',
+    pain: 'Meta clicks do not convert because promise mismatch kills trust',
+    mechanism: 'congruent hook, body copy, and CTA language',
   },
   {
-    label: 'Ad Congruence',
-    kicker: 'Meta Ads Fit',
-    problem: 'traffic clicks because of one promise but sees a different promise on-page',
-    shift: 'every ad angle has a matching section and matching CTA path',
-    mechanic: 'ad-to-section congruence map for each campaign angle',
+    name: 'Ad Congruence',
+    promise: 'Make every ad angle land cleanly',
+    pain: 'each campaign speaks a different language and weakens conversion',
+    mechanism: 'angle-specific page sections and intent mapping',
   },
   {
-    label: 'Page Conversion',
-    kicker: 'CRO',
-    problem: 'the page requires too much thinking and too many decisions',
-    shift: 'low cognitive load layout that moves people from interest to checkout fast',
-    mechanic: 'simple visual hierarchy and friction reduction',
+    name: 'Page Conversion',
+    promise: 'Reduce thinking and increase action',
+    pain: 'buyers face too many choices and no clear next step',
+    mechanism: 'low cognitive load layout and hierarchy',
   },
   {
-    label: 'Checkout and Upsells',
-    kicker: 'Order Flow',
-    problem: 'buyers reach checkout but drop due to trust gaps or unclear value',
-    shift: 'checkout confidence, clear stack, and smart low-friction order bump',
-    mechanic: 'proof placement, risk reversal, and checkout micro-copy',
+    name: 'Checkout Lift',
+    promise: 'Turn intent into purchases',
+    pain: 'drop-off happens at the most expensive moment of the funnel',
+    mechanism: 'trust stack, risk reversal, and checkout micro-copy',
   },
   {
-    label: 'Funnel Liquidity',
-    kicker: 'Break-Even Model',
-    problem: 'ad spend bleeds cash before backend revenue can recover it',
-    shift: 'front-end economics designed to break even fast or produce early margin',
-    mechanic: 'AOV lifts and conversion math tied to traffic quality',
+    name: 'Break-Even Math',
+    promise: 'Protect spend while you scale',
+    pain: 'ad spend burns before the front-end offer can recover acquisition cost',
+    mechanism: 'unit economics model across CAC, CVR, AOV, and payback',
   },
   {
-    label: 'Warm Lead Automation',
-    kicker: 'Ascension Engine',
-    problem: 'new leads buy once and disappear without a clear next step',
-    shift: 'front-end buyers move into warm lead nurture and backend invitation flow',
-    mechanic: 'behavior-based follow-up and offer sequencing',
+    name: 'Warm Lead Engine',
+    promise: 'Create buyers who are ready for more',
+    pain: 'front-end buyers purchase once then disappear',
+    mechanism: 'post-purchase momentum and nurture sequencing',
   },
   {
-    label: 'High-Ticket Bridge',
-    kicker: 'Backend Conversion',
-    problem: 'high-ticket sales team gets cold leads with low buying intent',
-    shift: 'only warmed, problem-aware, action-taking leads reach the high-ticket offer',
-    mechanic: 'pre-framed ascension messaging and call qualification',
+    name: 'Offer Ascension',
+    promise: 'Move low-ticket buyers toward your core offer',
+    pain: 'buyers complete checkout but do not see a clear next action',
+    mechanism: 'follow-up framing tied to next practical step',
   },
   {
-    label: 'Optimization Cadence',
-    kicker: 'CMO + CRO Ops',
-    problem: 'changes are random and teams cannot tell what improves revenue',
-    shift: 'weekly testing cadence across ads, page, checkout, and follow-up',
-    mechanic: 'priority scorecards and controlled iteration loops',
+    name: 'CMO + CRO Ops',
+    promise: 'Run weekly growth decisions with certainty',
+    pain: 'teams tweak random things and cannot prove impact',
+    mechanism: 'testing cadence and conversion scorecards',
   },
   {
-    label: 'Scale and Autopilot',
-    kicker: 'Growth System',
-    problem: 'growth stalls because the funnel depends on manual intervention',
-    shift: 'repeatable acquisition system that compounds across paid traffic',
-    mechanic: 'documented playbooks and systemized handoffs',
+    name: 'Autopilot Scale',
+    promise: 'Compound growth with less chaos',
+    pain: 'growth stalls because everything depends on founder intervention',
+    mechanism: 'documented systems and repeatable paid traffic loops',
   },
 ];
 
-const angleBuckets = [
+const proofLines = [
+  'We design conversion paths first, then layer creativity on top.',
+  'We write in plain language your buyer can understand in one scroll.',
+  'We remove decisions that do not help someone buy.',
+  'We treat paid traffic as a system, not a guessing game.',
+  'We engineer front-end economics before scaling ad spend.',
+  'We turn low-ticket action into qualified buying intent and stronger follow-up momentum.',
+  'We optimize with measurable tests, not opinions.',
+  'We connect CMO strategy and CRO execution in one team.',
+  'We reduce funnel friction at every step from click to checkout.',
+  'We build pages that sell while your team sleeps.',
+];
+
+const objections = [
   {
-    label: 'One Problem Rule',
-    focus: 'solve one painful problem now, not ten later',
-    promise: 'clarity beats complexity with paid traffic',
-    action: 'remove extra offers and keep one decisive CTA',
+    q: 'Will this work if my ad account is small?',
+    a: 'Yes. Small budget accounts benefit most from clear unit economics and fast feedback loops.',
   },
   {
-    label: 'One Outcome Promise',
-    focus: 'make the first win obvious and measurable',
-    promise: 'buyers understand exactly what changes after purchase',
-    action: 'state one concrete before-and-after in plain language',
+    q: 'What if my offer is hard to explain?',
+    a: 'That is exactly why we start with low cognitive load messaging and one-problem positioning.',
   },
   {
-    label: 'One Page Mission',
-    focus: 'every section exists to support one next action',
-    promise: 'lower cognitive load increases conversion speed',
-    action: 'strip distractors and align every block to checkout intent',
+    q: 'Do I need new creative first?',
+    a: 'Not always. We often improve conversion by fixing congruence between current ads and page copy.',
   },
   {
-    label: 'Proof That Feels Real',
-    focus: 'show believable proof and mechanism, not hype',
-    promise: 'trust rises when claims are specific and verifiable',
-    action: 'insert specific outcomes, context, and decision points',
+    q: 'Can low-ticket offers hurt my premium brand?',
+    a: 'Not when positioned correctly. The front-end offer acts as qualification and trust acceleration.',
   },
   {
-    label: 'Risk Reversal',
-    focus: 'reduce fear at the point of decision',
-    promise: 'certainty grows when risk is clearly managed',
-    action: 'use protective language and plain guarantees',
+    q: 'Will this conflict with my main offer?',
+    a: 'No. We design the low-ticket offer to complement your core offer and increase buyer readiness.',
   },
   {
-    label: 'Fast Time to Value',
-    focus: 'buyers should do something useful in the first 24 hours',
-    promise: 'momentum creates belief and lowers refund risk',
-    action: 'design an immediate execution checklist after purchase',
+    q: 'How fast can we launch?',
+    a: 'Most teams can launch the first version in days once messaging and funnel structure are approved.',
   },
   {
-    label: 'Ad to Page Congruence',
-    focus: 'message match from scroll stop to checkout click',
-    promise: 'congruence protects paid traffic efficiency',
-    action: 'mirror ad hook, pain, and promise on the landing page',
+    q: 'What if we already have a funnel?',
+    a: 'Great. We optimize what exists first, then rebuild only what is proven to hold back conversion.',
   },
   {
-    label: 'Breakeven Math',
-    focus: 'engineer economics before scaling spend',
-    promise: 'stable unit economics enable confident media buying',
-    action: 'track CAC, CVR, AOV, and payback weekly',
+    q: 'Do you just do landing pages?',
+    a: 'No. We operate as CMO + CRO across ad congruence, offer structure, page conversion, and follow-up monetization.',
   },
   {
-    label: 'Backend Transition',
-    focus: 'front-end buyers must naturally want the next offer',
-    promise: 'ascension works when the next limitation is obvious',
-    action: 'bridge from low-ticket completion to high-ticket invitation',
+    q: 'How do we know the funnel is improving?',
+    a: 'We report against clear KPIs: CAC, CVR, AOV, payback time, and repeat buyer conversion rate.',
   },
   {
-    label: 'Autopilot Follow-Up',
-    focus: 'convert warm leads while the team sleeps',
-    promise: 'automated sequencing compounds high-ticket pipeline',
-    action: 'trigger nurture based on behavior and buying signals',
+    q: 'What is the real outcome?',
+    a: 'A front-end system that can liquidate spend, convert ad runners, and create predictable low-ticket demand.',
   },
 ];
 
-const quickWins = [
-  'launch one congruent Meta ad angle tied to one offer page',
-  'rewrite the headline and CTA to match paid ad intent',
-  'publish one low-friction checkout with clear risk reversal',
-  'activate one backend bridge email for new low-ticket buyers',
-  'cut decision fatigue by removing non-core page sections',
-  'install one measurement sheet for CAC, CVR, and AOV',
-  'test one proof block directly above the checkout CTA',
-  'deploy one ad creative that pre-frames the low-ticket offer',
-  'ship one 24-hour buyer action checklist',
-  'run one conversion review with CMO + CRO lens',
-];
-
-const protectiveLines = [
-  'You are not guessing. You are following a controlled funnel plan.',
-  'You do not need more tools. You need a simpler decision path.',
-  'You are not buying theory. You are buying execution and momentum.',
-  'You do not need viral ads. You need congruent ads that convert.',
-  'You are not scaling chaos. You are scaling a proven flow.',
-  'You do not need a full rebrand. You need message precision.',
-  'You are not adding complexity. You are removing friction.',
-  'You do not need colder traffic. You need warmer buyer intent.',
-  'You are not hoping for ROAS. You are engineering unit economics.',
-  'You do not need more meetings. You need better conversion systems.',
-];
-
-const sections = Array.from({ length: 100 }, (_, index) => {
-  const id = index + 1;
-  const phase = phaseBuckets[Math.floor(index / 10)];
-  const angle = angleBuckets[index % 10];
-  const win = quickWins[index % quickWins.length];
-  const protection = protectiveLines[index % protectiveLines.length];
+const sections = Array.from({ length: 100 }, (_, i) => {
+  const id = i + 1;
+  const phase = phases[Math.floor(i / 10)];
+  const objection = objections[i % objections.length];
+  const proof = proofLines[i % proofLines.length];
+  const variant = i % 10;
+  const cvrLift = `${12 + (i % 19)}%`;
+  const cpaDrop = `${8 + (i % 14)}%`;
+  const payback = `${7 + (i % 16)} days`;
+  const aovLift = `${10 + (i % 18)}%`;
 
   return {
     id,
-    title: `Section ${id}: ${phase.label} - ${angle.label}`,
-    kicker: `${phase.kicker} | ${angle.focus}`,
-    intro: `Most brands struggle here because ${phase.problem}.`,
-    bodyA: `Our CMO + CRO approach keeps this simple: ${phase.shift}. We apply the ${angle.label.toLowerCase()} principle so buyers see one clear path and move without hesitation.`,
-    bodyB: `Trojan horse strategy: the website looks like a straightforward low-ticket offer page, but it quietly pre-qualifies, warms, and routes buyers toward the high-ticket offer. ${protection}`,
-    bullets: [
-      `Core promise: ${angle.promise}.`,
-      `Execution move: ${angle.action}.`,
-      `Immediate 24-hour win: ${win}.`,
-      `Mechanism we apply: ${phase.mechanic}.`,
-    ],
-    showCta: id % 4 === 0,
+    phase,
+    variant,
+    proof,
+    objection,
+    cvrLift,
+    cpaDrop,
+    payback,
+    aovLift,
+    title: `Section ${String(id).padStart(2, '0')} - ${phase.name}: ${phase.promise}`,
+    lead: `Your Meta Ads funnel underperforms here because ${phase.pain}.`,
+    body: `This section sells one clear service: ${clarity.service} for ${clarity.audience}. We apply ${phase.mechanism} so your funnel stays coherent and easy to buy from.`,
   };
 });
 
 const sectionGroups = Array.from({ length: 10 }, (_, i) => ({
   label: `${i * 10 + 1}-${i * 10 + 10}`,
   anchor: `section-${i * 10 + 1}`,
-  title: phaseBuckets[i].label,
+  title: phases[i].name,
 }));
 ---
 
 <Layout
-  title="Stackpine | 100-Section Low-Ticket Funnel Blueprint"
-  description="Stackpine builds low-ticket front-end funnels for Meta Ads traffic that can liquidate ad spend, warm leads, and feed your high-ticket offer on autopilot."
+  title="Stackpine | 100 Conversion Sections for Low-Ticket Funnel Sales"
+  description="We are CMOs and CROs. We build low-ticket front-end funnels for Meta Ads that can break even or profit while improving ad efficiency."
 >
-  <header class="sticky top-0 z-50 bg-background/85 backdrop-blur-lg border-b border-separator">
+  <header class="sticky top-0 z-50 bg-background/90 backdrop-blur-lg border-b border-separator">
     <nav class="max-w-5xl mx-auto px-6 h-14 flex items-center gap-3">
       <a href="/" class="flex items-center gap-2 font-semibold">
         <span class="size-6 rounded-full bg-black flex items-center justify-center text-white text-xs font-bold">S</span>
         <span>Stackpine</span>
       </a>
-      <span class="text-tertiary text-xs sm:text-sm ml-1">CMO + CRO for Paid Traffic Funnels</span>
-      <a href={primaryCta} class="ml-auto text-sm px-4 h-8 rounded-lg font-medium btn-primary inline-flex items-center transition-colors">Start {offerName}</a>
+      <span class="text-tertiary text-xs sm:text-sm">CMO + CRO for Meta Ads Funnels</span>
+      <a href={primaryCta} class="ml-auto text-sm px-4 h-8 rounded-lg font-medium btn-primary inline-flex items-center transition-colors">Hire Us To Build</a>
     </nav>
   </header>
 
   <main class="max-w-5xl mx-auto px-6 py-10">
-    <section class="rounded-2xl bg-white shadow-natural border border-separator p-7 sm:p-10">
-      <p class="text-sm font-semibold text-[rgb(17,168,255)] uppercase tracking-wide">Front-End Offer Setup</p>
-      <h1 class="mt-3 text-4xl sm:text-5xl font-bold leading-tight tracking-tight">
-        We build low-ticket funnels that make Meta Ads traffic pay for itself.
+    <section class="rounded-3xl bg-white shadow-natural border border-separator p-7 sm:p-10">
+      <p class="text-sm font-semibold text-[rgb(17,168,255)] uppercase tracking-wide">Low-Ticket Front-End Service</p>
+      <h1 class="mt-3 text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+        We build low-ticket funnels that make paid traffic easier to profit from.
       </h1>
-      <p class="mt-5 text-secondary text-base sm:text-lg max-w-3xl">
-        We are CMOs and CROs. We use your website as the trojan horse: simple on the surface, high-conversion under the hood.
-        The goal is straightforward. Use a low-ticket front-end offer to liquidate ad spend, then route warm buyers into your high-ticket offer on autopilot.
+      <p class="mt-5 text-secondary text-base sm:text-lg max-w-4xl">
+        We are CMOs and CROs. We build conversion-driven, congruent ad-to-funnel systems for Meta Ads traffic.
+        The strategy is simple: low cognitive load copy, one clear promise, and one clear next step.
       </p>
-      <p class="mt-4 text-secondary text-base sm:text-lg max-w-3xl">
-        Low cognitive load is the rule. One message. One promise. One next step. No confusion. No bloated funnel logic.
+      <p class="mt-4 text-secondary text-base sm:text-lg max-w-4xl">
+        We sell a straightforward low-ticket funnel service for ad runners. The page is intentionally simple, direct, and conversion-focused from first click to checkout.
       </p>
+
+      <div class="mt-5 rounded-xl border border-separator bg-[rgb(250,250,250)] p-4">
+        <p class="text-sm"><span class="font-semibold">What we sell:</span> {clarity.service}</p>
+        <p class="text-sm mt-1"><span class="font-semibold">Who it is for:</span> {clarity.audience}</p>
+        <p class="text-sm mt-1"><span class="font-semibold">Core result:</span> {clarity.outcome}</p>
+      </div>
 
       <div class="mt-7 grid sm:grid-cols-3 gap-3">
         <div class="rounded-xl border border-separator bg-[rgb(250,250,250)] p-4">
-          <p class="text-tertiary text-xs uppercase tracking-wide">Offer Name</p>
-          <p class="mt-1 text-lg font-semibold">{offerName}</p>
+          <p class="text-tertiary text-xs uppercase tracking-wide">Low-Ticket Offer</p>
+          <p class="mt-1 text-lg font-semibold">{lowTicketOffer.name}</p>
         </div>
         <div class="rounded-xl border border-separator bg-[rgb(250,250,250)] p-4">
           <p class="text-tertiary text-xs uppercase tracking-wide">Front-End Price</p>
-          <p class="mt-1 text-lg font-semibold">{offerPrice}</p>
+          <p class="mt-1 text-lg font-semibold">{lowTicketOffer.price}</p>
         </div>
         <div class="rounded-xl border border-separator bg-[rgb(250,250,250)] p-4">
-          <p class="text-tertiary text-xs uppercase tracking-wide">Page Sections</p>
-          <p class="mt-1 text-lg font-semibold">{sections.length} simple sections</p>
+          <p class="text-tertiary text-xs uppercase tracking-wide">Promise</p>
+          <p class="mt-1 text-sm text-secondary">{clarity.method}</p>
         </div>
       </div>
 
-      <div class="mt-6 rounded-xl border border-separator p-5 bg-[rgb(250,250,250)]">
-        <p class="font-semibold">What the {offerPrice} front-end service includes:</p>
-        <ul class="mt-3 space-y-2 text-secondary text-sm sm:text-base list-disc list-inside">
-          <li>Low-ticket offer positioning and one-promise messaging framework</li>
-          <li>Meta ad to landing-page congruence map for your main traffic angle</li>
-          <li>Conversion-driven page structure with one clear action path</li>
-          <li>Break-even model setup: CAC, CVR, AOV, and payback assumptions</li>
-          <li>Warm lead bridge that moves front-end buyers to your high-ticket offer</li>
-        </ul>
+      <div class="mt-6 grid lg:grid-cols-5 gap-4">
+        <div class="lg:col-span-3 rounded-xl border border-separator p-5 bg-[rgb(250,250,250)]">
+          <p class="font-semibold">Who this is for</p>
+          <p class="mt-2 text-secondary text-sm sm:text-base">{lowTicketOffer.who}</p>
+          <p class="mt-3 text-secondary text-sm sm:text-base">
+            If you want more leads and sales from Meta Ads without confusing your market, this is built for you.
+          </p>
+        </div>
+        <div class="lg:col-span-2 rounded-xl border border-separator p-5 bg-white shadow-natural">
+          <p class="font-semibold">Included in the {lowTicketOffer.price} front-end setup</p>
+          <ul class="mt-3 space-y-2 text-secondary text-sm list-disc list-inside">
+            <li>Offer explanation script in plain language</li>
+            <li>Meta ad to page congruence map</li>
+            <li>Low-friction conversion section plan</li>
+            <li>Break-even economics worksheet</li>
+            <li>Post-purchase follow-up sequence for repeat purchase and booked calls</li>
+          </ul>
+        </div>
       </div>
 
       <div class="mt-7 flex flex-wrap gap-2.5">
         <a href={primaryCta} class="text-sm sm:text-base btn-primary font-semibold text-white px-7 py-3 rounded-xl tracking-[-0.0125em] inline-flex items-center justify-center transition-colors">
-          Build My Low-Ticket Funnel
+          Hire Stackpine To Build Your Funnel Website
         </a>
-        <a href="mailto:support@stackpine.com?subject=Send%20Me%20The%20100-Section%20Funnel%20Plan" class="text-sm sm:text-base font-semibold shadow-natural px-7 py-3 rounded-xl bg-white tracking-[-0.0125em] inline-flex items-center gap-2 hover:bg-gray-50 transition-colors">
-          Email Me The Plan
+        <a href={secondaryCta} class="text-sm sm:text-base font-semibold shadow-natural px-7 py-3 rounded-xl bg-white tracking-[-0.0125em] inline-flex items-center gap-2 hover:bg-gray-50 transition-colors">
+          Send Me The {lowTicketOffer.price} Scope
         </a>
       </div>
     </section>
 
     <section class="mt-8 rounded-2xl bg-white shadow-natural border border-separator p-6">
-      <p class="font-semibold">Jump to any 10-section block:</p>
+      <p class="font-semibold">Jump through the 100 sales sections by phase:</p>
       <div class="mt-3 grid sm:grid-cols-2 lg:grid-cols-5 gap-2">
         {sectionGroups.map((group) => (
           <a href={`#${group.anchor}`} class="text-sm border border-separator rounded-lg px-3 py-2 hover:bg-black/5 transition-colors">
@@ -275,39 +262,179 @@ const sectionGroups = Array.from({ length: 10 }, (_, i) => ({
       </div>
     </section>
 
-    <section class="mt-8 space-y-4">
-      {sections.map((section) => (
-        <section id={`section-${section.id}`} class="rounded-2xl bg-white shadow-natural border border-separator p-6 sm:p-7">
-          <p class="text-xs uppercase tracking-wide text-tertiary font-semibold">{section.kicker}</p>
-          <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight">{section.title}</h2>
-          <p class="mt-4 text-secondary text-base sm:text-lg">{section.intro}</p>
-          <p class="mt-3 text-secondary text-base sm:text-lg">{section.bodyA}</p>
-          <p class="mt-3 text-secondary text-base sm:text-lg">{section.bodyB}</p>
+    <section class="mt-8 space-y-5">
+      {sections.map((s) => (
+        <section id={`section-${s.id}`} class="rounded-3xl bg-white shadow-natural border border-separator p-6 sm:p-8">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-xs uppercase tracking-wide text-tertiary font-semibold">{s.phase.name}</span>
+            <span class="text-xs px-2 py-1 rounded-full bg-[rgb(250,250,250)] border border-separator">#{String(s.id).padStart(2, '0')}</span>
+          </div>
 
-          <ul class="mt-4 space-y-2 text-secondary text-sm sm:text-base list-disc list-inside">
-            {section.bullets.map((bullet) => <li>{bullet}</li>)}
-          </ul>
+          <h2 class="mt-3 text-2xl sm:text-3xl font-bold tracking-tight">{s.title}</h2>
+          <p class="mt-3 text-secondary text-base sm:text-lg">{s.lead}</p>
+          <p class="mt-2 text-secondary text-base sm:text-lg">{s.body}</p>
 
-          {section.showCta && (
-            <div class="mt-5">
-              <a href={primaryCta} class="text-sm sm:text-base btn-primary font-semibold text-white px-6 py-2.5 rounded-xl inline-flex items-center transition-colors">
-                Activate {offerName}
-              </a>
+          <div class="mt-4 grid sm:grid-cols-3 gap-2">
+            <div class="text-xs rounded-lg border border-separator bg-[rgb(250,250,250)] px-3 py-2"><span class="font-semibold">Offer:</span> {clarity.service}</div>
+            <div class="text-xs rounded-lg border border-separator bg-[rgb(250,250,250)] px-3 py-2"><span class="font-semibold">Audience:</span> {clarity.audience}</div>
+            <div class="text-xs rounded-lg border border-separator bg-[rgb(250,250,250)] px-3 py-2"><span class="font-semibold">Result:</span> {clarity.outcome}</div>
+          </div>
+
+          {s.variant === 0 && (
+            <div class="mt-5 grid lg:grid-cols-5 gap-4">
+              <div class="lg:col-span-3 rounded-xl border border-separator p-4 bg-[rgb(250,250,250)]">
+                <p class="font-semibold">What we change immediately</p>
+                <p class="mt-2 text-secondary text-sm sm:text-base">We remove complex offer language and replace it with a direct web development promise ad runners understand in seconds.</p>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span class="text-xs px-2 py-1 rounded-full bg-white border border-separator">One problem</span>
+                  <span class="text-xs px-2 py-1 rounded-full bg-white border border-separator">One promise</span>
+                  <span class="text-xs px-2 py-1 rounded-full bg-white border border-separator">One CTA</span>
+                </div>
+              </div>
+              <div class="lg:col-span-2 rounded-xl border border-separator p-4 bg-white shadow-natural">
+                <p class="font-semibold text-sm">Micro-proof</p>
+                <p class="mt-2 text-secondary text-sm">{s.proof} This keeps your funnel website coherent with your ad message.</p>
+                <a href={primaryCta} class="mt-3 text-sm btn-primary text-white px-4 py-2 rounded-lg inline-flex">Hire Us For This Phase</a>
+              </div>
             </div>
           )}
+
+          {s.variant === 1 && (
+            <div class="mt-5 grid md:grid-cols-2 gap-4">
+              <div class="rounded-xl border border-separator p-4 bg-[rgb(250,250,250)]">
+                <p class="font-semibold text-sm">Before</p>
+                <p class="mt-2 text-secondary text-sm">Ad says one thing. Website says another. Buyer trust drops and spend gets wasted.</p>
+              </div>
+              <div class="rounded-xl border border-[rgb(17,168,255)] p-4 bg-white">
+                <p class="font-semibold text-sm text-[rgb(17,168,255)]">After</p>
+                <p class="mt-2 text-secondary text-sm">Ad hook, website headline, proof, and CTA all match. Buyer decisions feel easy and conversion lifts.</p>
+              </div>
+            </div>
+          )}
+
+          {s.variant === 2 && (
+            <div class="mt-5 rounded-xl border border-separator p-5 bg-[rgb(250,250,250)]">
+              <p class="font-semibold">4-step web funnel implementation inside this section</p>
+              <div class="mt-3 grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <div class="rounded-lg bg-white border border-separator p-3"><p class="text-xs text-tertiary">Step 1</p><p class="font-medium text-sm mt-1">Diagnose friction</p></div>
+                <div class="rounded-lg bg-white border border-separator p-3"><p class="text-xs text-tertiary">Step 2</p><p class="font-medium text-sm mt-1">Rewrite message</p></div>
+                <div class="rounded-lg bg-white border border-separator p-3"><p class="text-xs text-tertiary">Step 3</p><p class="font-medium text-sm mt-1">Rebuild website section flow</p></div>
+                <div class="rounded-lg bg-white border border-separator p-3"><p class="text-xs text-tertiary">Step 4</p><p class="font-medium text-sm mt-1">Launch and measure</p></div>
+              </div>
+            </div>
+          )}
+
+          {s.variant === 3 && (
+            <div class="mt-5 grid lg:grid-cols-3 gap-4">
+              <blockquote class="lg:col-span-2 rounded-xl border border-separator p-5 bg-[rgb(250,250,250)]">
+                <p class="font-semibold">Proof mindset for this phase</p>
+                <p class="mt-2 text-secondary text-sm sm:text-base">"{s.proof}"</p>
+              </blockquote>
+              <div class="rounded-xl border border-separator p-5 bg-white shadow-natural">
+                <p class="text-xs text-tertiary uppercase tracking-wide">Expected movement</p>
+                <p class="mt-2 text-sm">CVR lift: <span class="font-semibold">{s.cvrLift}</span></p>
+                <p class="mt-1 text-sm">CPA drop: <span class="font-semibold">{s.cpaDrop}</span></p>
+                <p class="mt-1 text-sm">Payback: <span class="font-semibold">{s.payback}</span></p>
+              </div>
+            </div>
+          )}
+
+          {s.variant === 4 && (
+            <div class="mt-5 rounded-xl border border-separator overflow-hidden">
+              <div class="grid grid-cols-4 bg-[rgb(250,250,250)] text-xs uppercase tracking-wide text-tertiary px-4 py-2">
+                <span>Metric</span><span>Current</span><span>Target</span><span>Why it matters</span>
+              </div>
+              <div class="grid grid-cols-4 px-4 py-3 text-sm border-t border-separator"><span>CVR</span><span class="text-secondary">1.2%</span><span class="font-semibold">+{s.cvrLift}</span><span class="text-secondary">more buyers per click</span></div>
+              <div class="grid grid-cols-4 px-4 py-3 text-sm border-t border-separator"><span>CPA</span><span class="text-secondary">high</span><span class="font-semibold">-{s.cpaDrop}</span><span class="text-secondary">healthier ad economics</span></div>
+              <div class="grid grid-cols-4 px-4 py-3 text-sm border-t border-separator"><span>AOV</span><span class="text-secondary">flat</span><span class="font-semibold">+{s.aovLift}</span><span class="text-secondary">faster spend recovery</span></div>
+            </div>
+          )}
+
+          {s.variant === 5 && (
+            <div class="mt-5 rounded-xl border border-separator p-5 bg-[rgb(250,250,250)]">
+              <p class="font-semibold">Common objection we remove in this section</p>
+              <p class="mt-3 text-sm font-medium">{s.objection.q}</p>
+              <p class="mt-2 text-secondary text-sm">{s.objection.a}</p>
+              <a href={secondaryCta} class="mt-4 text-sm font-medium px-4 py-2 rounded-lg bg-white border border-separator inline-flex hover:bg-black/5">Get The Objection Playbook</a>
+            </div>
+          )}
+
+          {s.variant === 6 && (
+            <div class="mt-5 grid lg:grid-cols-2 gap-4">
+              <div class="rounded-xl border border-separator p-5 bg-white">
+                <p class="text-xs uppercase tracking-wide text-tertiary">Ad Side</p>
+                <p class="mt-2 font-semibold">Promise in ad creative</p>
+                <p class="mt-2 text-secondary text-sm">Simple problem statement + believable quick win + call-to-action.</p>
+              </div>
+              <div class="rounded-xl border border-[rgb(17,168,255)] p-5 bg-white">
+                <p class="text-xs uppercase tracking-wide text-[rgb(17,168,255)]">Landing Side</p>
+                <p class="mt-2 font-semibold">Matching promise on page</p>
+                <p class="mt-2 text-secondary text-sm">Same language, same claim, same action. Congruence keeps buyer confidence high and your offer clear.</p>
+              </div>
+            </div>
+          )}
+
+          {s.variant === 7 && (
+            <div class="mt-5 grid lg:grid-cols-5 gap-4">
+              <div class="lg:col-span-3 rounded-xl border border-separator p-5 bg-[rgb(250,250,250)]">
+                <p class="font-semibold">Offer stack for this phase</p>
+                <ul class="mt-3 space-y-2 text-secondary text-sm list-disc list-inside">
+                  <li>Meta Ads message-to-page congruence blueprint</li>
+                  <li>Low-ticket website copy blocks and CTA placement</li>
+                  <li>Break-even and follow-up monetization planning sheet</li>
+                </ul>
+              </div>
+              <div class="lg:col-span-2 rounded-xl border border-separator p-5 bg-white shadow-natural">
+                <p class="text-xs text-tertiary uppercase tracking-wide">Pricing Ladder</p>
+                <p class="mt-2 text-sm">Low-ticket setup: <span class="font-semibold">{lowTicketOffer.price}</span></p>
+                <p class="mt-1 text-sm">Implementation sprint: <span class="font-semibold">by scope</span></p>
+                <p class="mt-1 text-secondary text-sm">This front-end offer is the entry point to hiring us for full implementation.</p>
+              </div>
+            </div>
+          )}
+
+          {s.variant === 8 && (
+            <div class="mt-5 rounded-xl border border-separator p-5 bg-[rgb(250,250,250)]">
+              <p class="font-semibold">72-hour sprint view</p>
+              <div class="mt-3 grid sm:grid-cols-3 gap-3">
+                <div class="rounded-lg border border-separator bg-white p-3"><p class="text-xs text-tertiary">Day 1</p><p class="font-medium text-sm mt-1">Clarify offer + ad promise</p></div>
+                <div class="rounded-lg border border-separator bg-white p-3"><p class="text-xs text-tertiary">Day 2</p><p class="font-medium text-sm mt-1">Build conversion website section flow</p></div>
+                <div class="rounded-lg border border-separator bg-white p-3"><p class="text-xs text-tertiary">Day 3</p><p class="font-medium text-sm mt-1">Launch + monitor economics</p></div>
+              </div>
+            </div>
+          )}
+
+          {s.variant === 9 && (
+            <div class="mt-5 rounded-xl border border-separator p-5 bg-white shadow-natural">
+              <p class="font-semibold">Low-ticket web funnel conversion flywheel</p>
+              <div class="mt-3 grid sm:grid-cols-4 gap-2 text-sm">
+                <div class="rounded-lg border border-separator p-3 bg-[rgb(250,250,250)]">Meta ad click</div>
+                <div class="rounded-lg border border-separator p-3 bg-[rgb(250,250,250)]">Low-ticket purchase</div>
+                <div class="rounded-lg border border-separator p-3 bg-[rgb(250,250,250)]">Warm lead nurture</div>
+                <div class="rounded-lg border border-[rgb(17,168,255)] p-3 bg-white">Repeat sale or booked call</div>
+              </div>
+              <p class="mt-3 text-secondary text-sm">This is how your front-end service funds growth and strengthens long-term customer value.</p>
+            </div>
+          )}
+
+          <div class="mt-5 flex flex-wrap gap-2.5">
+            <a href={primaryCta} class="text-sm btn-primary text-white px-5 py-2.5 rounded-lg inline-flex">Hire Us To Build This Section</a>
+            <a href={secondaryCta} class="text-sm px-5 py-2.5 rounded-lg border border-separator bg-white hover:bg-black/5 inline-flex">Send Me Scope</a>
+          </div>
         </section>
       ))}
     </section>
 
-    <section class="mt-8 rounded-2xl bg-white shadow-natural border border-separator p-8 sm:p-10 text-center">
-      <p class="text-[rgb(17,168,255)] font-semibold uppercase tracking-wide text-sm">Final Step</p>
-      <h2 class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight">Ready to turn paid traffic into warm high-ticket buyers?</h2>
+    <section class="mt-8 rounded-3xl bg-white shadow-natural border border-separator p-8 sm:p-10 text-center">
+      <p class="text-[rgb(17,168,255)] font-semibold uppercase tracking-wide text-sm">Final CTA</p>
+      <h2 class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight">Want us to build your low-ticket funnel for paid ad traffic?</h2>
       <p class="mt-4 text-secondary text-base sm:text-lg max-w-3xl mx-auto">
-        Send us your current offer, ad account status, and backend goal. We will map your low-ticket front-end so it can fund traffic, build trust, and feed your sales team with warmer leads.
+        If you want paid traffic that converts with less waste and more certainty, hire us.
+        We will build your low-ticket funnel website, align it to your Meta ads, and optimize it for clear, coherent buying decisions.
       </p>
       <div class="mt-6 flex justify-center">
         <a href={primaryCta} class="text-sm sm:text-base btn-primary font-semibold text-white px-7 py-3 rounded-xl tracking-[-0.0125em] inline-flex items-center justify-center transition-colors">
-          Start The Funnel Trojan Sprint
+          Hire Stackpine Now
         </a>
       </div>
     </section>
