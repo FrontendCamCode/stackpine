@@ -1,18 +1,30 @@
 @import "tailwindcss";
 
 :root {
-  --sp-bg: 250, 250, 250;
-  --sp-text: 23, 23, 23;
-  --sp-secondary: 92, 92, 92;
-  --sp-tertiary: 130, 130, 130;
-  --sp-separator: 0, 0, 0;
-  --sp-blue: 17, 168, 255;
+  --sp-bg: 248, 248, 245;
+  --sp-text: 18, 18, 18;
+  --sp-secondary: 82, 82, 82;
+  --sp-tertiary: 120, 120, 120;
+  --sp-separator: 16, 16, 16;
+  --sp-blue: 31, 128, 245;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
 }
 
 body {
-  background-color: rgb(var(--sp-bg));
+  background:
+    radial-gradient(1200px 300px at 50% -120px, rgba(31, 128, 245, 0.08), transparent 60%),
+    rgb(var(--sp-bg));
   color: rgb(var(--sp-text));
   font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.01em;
 }
 
 .bg-background {
@@ -28,14 +40,7 @@ body {
 }
 
 .border-separator {
-  border-color: rgb(var(--sp-separator), 0.06);
-}
-
-.shadow-natural {
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.06),
-    0 1px 1px -0.5px rgba(0, 0, 0, 0.06),
-    0 3px 3px -1.5px rgba(0, 0, 0, 0.06);
+  border-color: rgb(var(--sp-separator), 0.08);
 }
 
 .btn-primary {
@@ -44,5 +49,9 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: rgb(33, 143, 205);
+  background-color: rgb(24, 106, 208);
+}
+
+::selection {
+  background: rgba(31, 128, 245, 0.16);
 }
