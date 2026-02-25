@@ -1,149 +1,320 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const primaryCta = 'mailto:support@stackpine.com?subject=Build%20My%20Low-Ticket%20Funnel';
+const offerName = 'Funnel Trojan Front-End Sprint';
+const offerPrice = '$97';
+
+const phaseBuckets = [
+  {
+    label: 'Offer Foundation',
+    kicker: 'Positioning',
+    problem: 'they sell too many outcomes at once and confuse cold traffic',
+    shift: 'one clear low-ticket offer with one painful problem and one immediate win',
+    mechanic: 'single-offer clarity and one CTA from headline to checkout',
+  },
+  {
+    label: 'Audience and Pain Match',
+    kicker: 'Message Market Match',
+    problem: 'their ad message and landing page language do not match buyer pain',
+    shift: 'ad copy and page copy use the same pain language and same promise',
+    mechanic: 'pain-first copy and direct response framing',
+  },
+  {
+    label: 'Ad Congruence',
+    kicker: 'Meta Ads Fit',
+    problem: 'traffic clicks because of one promise but sees a different promise on-page',
+    shift: 'every ad angle has a matching section and matching CTA path',
+    mechanic: 'ad-to-section congruence map for each campaign angle',
+  },
+  {
+    label: 'Page Conversion',
+    kicker: 'CRO',
+    problem: 'the page requires too much thinking and too many decisions',
+    shift: 'low cognitive load layout that moves people from interest to checkout fast',
+    mechanic: 'simple visual hierarchy and friction reduction',
+  },
+  {
+    label: 'Checkout and Upsells',
+    kicker: 'Order Flow',
+    problem: 'buyers reach checkout but drop due to trust gaps or unclear value',
+    shift: 'checkout confidence, clear stack, and smart low-friction order bump',
+    mechanic: 'proof placement, risk reversal, and checkout micro-copy',
+  },
+  {
+    label: 'Funnel Liquidity',
+    kicker: 'Break-Even Model',
+    problem: 'ad spend bleeds cash before backend revenue can recover it',
+    shift: 'front-end economics designed to break even fast or produce early margin',
+    mechanic: 'AOV lifts and conversion math tied to traffic quality',
+  },
+  {
+    label: 'Warm Lead Automation',
+    kicker: 'Ascension Engine',
+    problem: 'new leads buy once and disappear without a clear next step',
+    shift: 'front-end buyers move into warm lead nurture and backend invitation flow',
+    mechanic: 'behavior-based follow-up and offer sequencing',
+  },
+  {
+    label: 'High-Ticket Bridge',
+    kicker: 'Backend Conversion',
+    problem: 'high-ticket sales team gets cold leads with low buying intent',
+    shift: 'only warmed, problem-aware, action-taking leads reach the high-ticket offer',
+    mechanic: 'pre-framed ascension messaging and call qualification',
+  },
+  {
+    label: 'Optimization Cadence',
+    kicker: 'CMO + CRO Ops',
+    problem: 'changes are random and teams cannot tell what improves revenue',
+    shift: 'weekly testing cadence across ads, page, checkout, and follow-up',
+    mechanic: 'priority scorecards and controlled iteration loops',
+  },
+  {
+    label: 'Scale and Autopilot',
+    kicker: 'Growth System',
+    problem: 'growth stalls because the funnel depends on manual intervention',
+    shift: 'repeatable acquisition system that compounds across paid traffic',
+    mechanic: 'documented playbooks and systemized handoffs',
+  },
+];
+
+const angleBuckets = [
+  {
+    label: 'One Problem Rule',
+    focus: 'solve one painful problem now, not ten later',
+    promise: 'clarity beats complexity with paid traffic',
+    action: 'remove extra offers and keep one decisive CTA',
+  },
+  {
+    label: 'One Outcome Promise',
+    focus: 'make the first win obvious and measurable',
+    promise: 'buyers understand exactly what changes after purchase',
+    action: 'state one concrete before-and-after in plain language',
+  },
+  {
+    label: 'One Page Mission',
+    focus: 'every section exists to support one next action',
+    promise: 'lower cognitive load increases conversion speed',
+    action: 'strip distractors and align every block to checkout intent',
+  },
+  {
+    label: 'Proof That Feels Real',
+    focus: 'show believable proof and mechanism, not hype',
+    promise: 'trust rises when claims are specific and verifiable',
+    action: 'insert specific outcomes, context, and decision points',
+  },
+  {
+    label: 'Risk Reversal',
+    focus: 'reduce fear at the point of decision',
+    promise: 'certainty grows when risk is clearly managed',
+    action: 'use protective language and plain guarantees',
+  },
+  {
+    label: 'Fast Time to Value',
+    focus: 'buyers should do something useful in the first 24 hours',
+    promise: 'momentum creates belief and lowers refund risk',
+    action: 'design an immediate execution checklist after purchase',
+  },
+  {
+    label: 'Ad to Page Congruence',
+    focus: 'message match from scroll stop to checkout click',
+    promise: 'congruence protects paid traffic efficiency',
+    action: 'mirror ad hook, pain, and promise on the landing page',
+  },
+  {
+    label: 'Breakeven Math',
+    focus: 'engineer economics before scaling spend',
+    promise: 'stable unit economics enable confident media buying',
+    action: 'track CAC, CVR, AOV, and payback weekly',
+  },
+  {
+    label: 'Backend Transition',
+    focus: 'front-end buyers must naturally want the next offer',
+    promise: 'ascension works when the next limitation is obvious',
+    action: 'bridge from low-ticket completion to high-ticket invitation',
+  },
+  {
+    label: 'Autopilot Follow-Up',
+    focus: 'convert warm leads while the team sleeps',
+    promise: 'automated sequencing compounds high-ticket pipeline',
+    action: 'trigger nurture based on behavior and buying signals',
+  },
+];
+
+const quickWins = [
+  'launch one congruent Meta ad angle tied to one offer page',
+  'rewrite the headline and CTA to match paid ad intent',
+  'publish one low-friction checkout with clear risk reversal',
+  'activate one backend bridge email for new low-ticket buyers',
+  'cut decision fatigue by removing non-core page sections',
+  'install one measurement sheet for CAC, CVR, and AOV',
+  'test one proof block directly above the checkout CTA',
+  'deploy one ad creative that pre-frames the low-ticket offer',
+  'ship one 24-hour buyer action checklist',
+  'run one conversion review with CMO + CRO lens',
+];
+
+const protectiveLines = [
+  'You are not guessing. You are following a controlled funnel plan.',
+  'You do not need more tools. You need a simpler decision path.',
+  'You are not buying theory. You are buying execution and momentum.',
+  'You do not need viral ads. You need congruent ads that convert.',
+  'You are not scaling chaos. You are scaling a proven flow.',
+  'You do not need a full rebrand. You need message precision.',
+  'You are not adding complexity. You are removing friction.',
+  'You do not need colder traffic. You need warmer buyer intent.',
+  'You are not hoping for ROAS. You are engineering unit economics.',
+  'You do not need more meetings. You need better conversion systems.',
+];
+
+const sections = Array.from({ length: 100 }, (_, index) => {
+  const id = index + 1;
+  const phase = phaseBuckets[Math.floor(index / 10)];
+  const angle = angleBuckets[index % 10];
+  const win = quickWins[index % quickWins.length];
+  const protection = protectiveLines[index % protectiveLines.length];
+
+  return {
+    id,
+    title: `Section ${id}: ${phase.label} - ${angle.label}`,
+    kicker: `${phase.kicker} | ${angle.focus}`,
+    intro: `Most brands struggle here because ${phase.problem}.`,
+    bodyA: `Our CMO + CRO approach keeps this simple: ${phase.shift}. We apply the ${angle.label.toLowerCase()} principle so buyers see one clear path and move without hesitation.`,
+    bodyB: `Trojan horse strategy: the website looks like a straightforward low-ticket offer page, but it quietly pre-qualifies, warms, and routes buyers toward the high-ticket offer. ${protection}`,
+    bullets: [
+      `Core promise: ${angle.promise}.`,
+      `Execution move: ${angle.action}.`,
+      `Immediate 24-hour win: ${win}.`,
+      `Mechanism we apply: ${phase.mechanic}.`,
+    ],
+    showCta: id % 4 === 0,
+  };
+});
+
+const sectionGroups = Array.from({ length: 10 }, (_, i) => ({
+  label: `${i * 10 + 1}-${i * 10 + 10}`,
+  anchor: `section-${i * 10 + 1}`,
+  title: phaseBuckets[i].label,
+}));
 ---
 
 <Layout
-  title="Stackpine | Web Development Agency"
-  description="Stackpine is a web development agency that builds fast, modern websites focused on generating qualified leads and closing more clients."
+  title="Stackpine | 100-Section Low-Ticket Funnel Blueprint"
+  description="Stackpine builds low-ticket front-end funnels for Meta Ads traffic that can liquidate ad spend, warm leads, and feed your high-ticket offer on autopilot."
 >
-  <header class="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-transparent">
-    <nav class="max-w-5xl mx-auto px-6 h-14 flex items-center">
+  <header class="sticky top-0 z-50 bg-background/85 backdrop-blur-lg border-b border-separator">
+    <nav class="max-w-5xl mx-auto px-6 h-14 flex items-center gap-3">
       <a href="/" class="flex items-center gap-2 font-semibold">
         <span class="size-6 rounded-full bg-black flex items-center justify-center text-white text-xs font-bold">S</span>
         <span>Stackpine</span>
       </a>
-
-      <div class="ml-auto hidden sm:flex items-center gap-1.5">
-        <a href="#services" class="text-sm px-2.5 py-1.5 h-8 rounded-lg hover:bg-black/5 transition-colors">Services</a>
-        <a href="#process" class="text-sm px-2.5 py-1.5 h-8 rounded-lg hover:bg-black/5 transition-colors">Process</a>
-        <a href="mailto:support@stackpine.com?subject=Web%20Project%20Inquiry" class="text-sm px-2.5 py-1.5 h-8 rounded-lg hover:bg-black/5 transition-colors">Contact</a>
-        <a href="mailto:support@stackpine.com?subject=Book%20Call%20-%20Stackpine" class="text-sm px-4 h-8 rounded-lg font-medium btn-primary inline-flex items-center transition-colors">
-          Book Call
-        </a>
-      </div>
+      <span class="text-tertiary text-xs sm:text-sm ml-1">CMO + CRO for Paid Traffic Funnels</span>
+      <a href={primaryCta} class="ml-auto text-sm px-4 h-8 rounded-lg font-medium btn-primary inline-flex items-center transition-colors">Start {offerName}</a>
     </nav>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6">
-    <section class="py-12">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-        Websites for service businesses that
-        <span class="bg-[rgba(255,215,0,0.3)] px-1 rounded">need more clients, not more traffic reports.</span>
+  <main class="max-w-5xl mx-auto px-6 py-10">
+    <section class="rounded-2xl bg-white shadow-natural border border-separator p-7 sm:p-10">
+      <p class="text-sm font-semibold text-[rgb(17,168,255)] uppercase tracking-wide">Front-End Offer Setup</p>
+      <h1 class="mt-3 text-4xl sm:text-5xl font-bold leading-tight tracking-tight">
+        We build low-ticket funnels that make Meta Ads traffic pay for itself.
       </h1>
-
       <p class="mt-5 text-secondary text-base sm:text-lg max-w-3xl">
-        Stackpine designs and builds conversion-focused websites for agencies, consultants, and local businesses.
-        Our work is focused on one thing: turning visitors into booked calls and paying clients.
+        We are CMOs and CROs. We use your website as the trojan horse: simple on the surface, high-conversion under the hood.
+        The goal is straightforward. Use a low-ticket front-end offer to liquidate ad spend, then route warm buyers into your high-ticket offer on autopilot.
+      </p>
+      <p class="mt-4 text-secondary text-base sm:text-lg max-w-3xl">
+        Low cognitive load is the rule. One message. One promise. One next step. No confusion. No bloated funnel logic.
       </p>
 
-      <div class="flex flex-wrap gap-2.5 mt-6">
-        <a href="mailto:support@stackpine.com?subject=New%20Web%20Project%20-%20Stackpine" class="text-sm sm:text-base btn-primary font-semibold text-white px-7 py-3 rounded-xl tracking-[-0.0125em] inline-flex items-center justify-center transition-colors">
-          Start a Project
-        </a>
-        <a href="mailto:support@stackpine.com?subject=Request%20Proposal%20-%20Stackpine" class="text-sm sm:text-base font-semibold shadow-natural px-7 py-3 rounded-xl bg-white tracking-[-0.0125em] inline-flex items-center gap-2 hover:bg-gray-50 transition-colors">
-          Request Proposal
-        </a>
-      </div>
-
-      <div class="mt-10 rounded-xl bg-white shadow-natural border border-separator overflow-hidden">
-        <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-black/5">
-          <div class="p-5">
-            <p class="text-tertiary text-xs uppercase tracking-wide">Timeline</p>
-            <p class="mt-2 font-semibold text-lg">2 to 6 weeks</p>
-            <p class="text-secondary text-sm mt-1">From strategy to launch</p>
-          </div>
-          <div class="p-5">
-            <p class="text-tertiary text-xs uppercase tracking-wide">Typical scope</p>
-            <p class="mt-2 font-semibold text-lg">5 to 12 pages</p>
-            <p class="text-secondary text-sm mt-1">Custom build and messaging</p>
-          </div>
-          <div class="p-5">
-            <p class="text-tertiary text-xs uppercase tracking-wide">Starting investment</p>
-            <p class="mt-2 font-semibold text-lg">$3,500+</p>
-            <p class="text-secondary text-sm mt-1">Depends on scope and speed</p>
-          </div>
+      <div class="mt-7 grid sm:grid-cols-3 gap-3">
+        <div class="rounded-xl border border-separator bg-[rgb(250,250,250)] p-4">
+          <p class="text-tertiary text-xs uppercase tracking-wide">Offer Name</p>
+          <p class="mt-1 text-lg font-semibold">{offerName}</p>
+        </div>
+        <div class="rounded-xl border border-separator bg-[rgb(250,250,250)] p-4">
+          <p class="text-tertiary text-xs uppercase tracking-wide">Front-End Price</p>
+          <p class="mt-1 text-lg font-semibold">{offerPrice}</p>
+        </div>
+        <div class="rounded-xl border border-separator bg-[rgb(250,250,250)] p-4">
+          <p class="text-tertiary text-xs uppercase tracking-wide">Page Sections</p>
+          <p class="mt-1 text-lg font-semibold">{sections.length} simple sections</p>
         </div>
       </div>
-    </section>
 
-    <section class="py-10">
-      <span class="font-medium text-tertiary text-sm">Ideal for</span>
-      <div class="flex flex-wrap gap-2 mt-3">
-        <span class="text-sm px-3 py-1.5 bg-white rounded-full border border-separator">Agencies</span>
-        <span class="text-sm px-3 py-1.5 bg-white rounded-full border border-separator">Consultants</span>
-        <span class="text-sm px-3 py-1.5 bg-white rounded-full border border-separator">Contractors</span>
-        <span class="text-sm px-3 py-1.5 bg-white rounded-full border border-separator">Law firms</span>
-        <span class="text-sm px-3 py-1.5 bg-white rounded-full border border-separator">Health and wellness brands</span>
+      <div class="mt-6 rounded-xl border border-separator p-5 bg-[rgb(250,250,250)]">
+        <p class="font-semibold">What the {offerPrice} front-end service includes:</p>
+        <ul class="mt-3 space-y-2 text-secondary text-sm sm:text-base list-disc list-inside">
+          <li>Low-ticket offer positioning and one-promise messaging framework</li>
+          <li>Meta ad to landing-page congruence map for your main traffic angle</li>
+          <li>Conversion-driven page structure with one clear action path</li>
+          <li>Break-even model setup: CAC, CVR, AOV, and payback assumptions</li>
+          <li>Warm lead bridge that moves front-end buyers to your high-ticket offer</li>
+        </ul>
+      </div>
+
+      <div class="mt-7 flex flex-wrap gap-2.5">
+        <a href={primaryCta} class="text-sm sm:text-base btn-primary font-semibold text-white px-7 py-3 rounded-xl tracking-[-0.0125em] inline-flex items-center justify-center transition-colors">
+          Build My Low-Ticket Funnel
+        </a>
+        <a href="mailto:support@stackpine.com?subject=Send%20Me%20The%20100-Section%20Funnel%20Plan" class="text-sm sm:text-base font-semibold shadow-natural px-7 py-3 rounded-xl bg-white tracking-[-0.0125em] inline-flex items-center gap-2 hover:bg-gray-50 transition-colors">
+          Email Me The Plan
+        </a>
       </div>
     </section>
 
-    <section id="services" class="py-12">
-      <h2 class="text-3xl sm:text-5xl font-bold tracking-tight">Services</h2>
-      <p class="text-secondary mt-3 max-w-2xl">Simple offers, clear outcomes, and websites that support your sales process.</p>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
-        <article class="bg-white shadow-natural rounded-xl p-6">
-          <p class="font-semibold text-lg">Lead-Gen Websites</p>
-          <p class="text-secondary text-sm mt-3">Home, service, and landing pages designed around your offer and CTA flow.</p>
-        </article>
-        <article class="bg-white shadow-natural rounded-xl p-6">
-          <p class="font-semibold text-lg">Website Redesigns</p>
-          <p class="text-secondary text-sm mt-3">Rebuild outdated sites into modern experiences that improve trust and conversion.</p>
-        </article>
-        <article class="bg-white shadow-natural rounded-xl p-6">
-          <p class="font-semibold text-lg">Ongoing Iteration</p>
-          <p class="text-secondary text-sm mt-3">Monthly support for testing, page updates, and continued conversion improvements.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="process" class="py-12">
-      <div class="bg-white shadow-natural rounded-xl p-8 sm:p-10">
-        <p class="text-[rgb(17,168,255)] font-semibold uppercase text-sm">How it works</p>
-        <h2 class="font-bold text-3xl sm:text-5xl tracking-tight mt-2">A clean process from idea to launch</h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-5 mt-10">
-          <div class="text-center md:text-left">
-            <div class="size-10 rounded-full bg-[rgb(17,168,255)] text-white font-bold flex items-center justify-center mx-auto md:mx-0">1</div>
-            <p class="font-semibold mt-3">Discovery</p>
-            <p class="text-secondary text-sm mt-1">Goals, audience, offer clarity.</p>
-          </div>
-          <div class="text-center md:text-left">
-            <div class="size-10 rounded-full bg-[rgb(17,168,255)] text-white font-bold flex items-center justify-center mx-auto md:mx-0">2</div>
-            <p class="font-semibold mt-3">Messaging + UX</p>
-            <p class="text-secondary text-sm mt-1">Page structure built for conversion.</p>
-          </div>
-          <div class="text-center md:text-left">
-            <div class="size-10 rounded-full bg-[rgb(17,168,255)] text-white font-bold flex items-center justify-center mx-auto md:mx-0">3</div>
-            <p class="font-semibold mt-3">Build + QA</p>
-            <p class="text-secondary text-sm mt-1">Fast, responsive, and production-ready.</p>
-          </div>
-          <div class="text-center md:text-left">
-            <div class="size-10 rounded-full bg-[rgb(17,168,255)] text-white font-bold flex items-center justify-center mx-auto md:mx-0">4</div>
-            <p class="font-semibold mt-3">Launch + Improve</p>
-            <p class="text-secondary text-sm mt-1">Analytics and next-step optimization.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-12">
-      <div class="rounded-xl bg-white shadow-natural p-8 sm:p-10">
-        <h3 class="font-bold text-3xl sm:text-4xl tracking-tight text-center">Ready to sell clients with your website?</h3>
-        <p class="text-secondary text-center mt-3 max-w-2xl mx-auto">
-          Send your current site (or no site), your offer, and your timeline. We will reply with a practical scope and recommendation.
-        </p>
-        <div class="flex justify-center mt-6">
-          <a href="mailto:support@stackpine.com?subject=New%20Client%20Site%20Project%20-%20Stackpine" class="text-sm sm:text-base btn-primary font-semibold text-white px-7 py-3 rounded-xl tracking-[-0.0125em] inline-flex items-center justify-center transition-colors">
-            Email Stackpine
+    <section class="mt-8 rounded-2xl bg-white shadow-natural border border-separator p-6">
+      <p class="font-semibold">Jump to any 10-section block:</p>
+      <div class="mt-3 grid sm:grid-cols-2 lg:grid-cols-5 gap-2">
+        {sectionGroups.map((group) => (
+          <a href={`#${group.anchor}`} class="text-sm border border-separator rounded-lg px-3 py-2 hover:bg-black/5 transition-colors">
+            <span class="font-medium">{group.label}</span>
+            <span class="block text-tertiary">{group.title}</span>
           </a>
-        </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-8 space-y-4">
+      {sections.map((section) => (
+        <section id={`section-${section.id}`} class="rounded-2xl bg-white shadow-natural border border-separator p-6 sm:p-7">
+          <p class="text-xs uppercase tracking-wide text-tertiary font-semibold">{section.kicker}</p>
+          <h2 class="mt-2 text-2xl sm:text-3xl font-bold tracking-tight">{section.title}</h2>
+          <p class="mt-4 text-secondary text-base sm:text-lg">{section.intro}</p>
+          <p class="mt-3 text-secondary text-base sm:text-lg">{section.bodyA}</p>
+          <p class="mt-3 text-secondary text-base sm:text-lg">{section.bodyB}</p>
+
+          <ul class="mt-4 space-y-2 text-secondary text-sm sm:text-base list-disc list-inside">
+            {section.bullets.map((bullet) => <li>{bullet}</li>)}
+          </ul>
+
+          {section.showCta && (
+            <div class="mt-5">
+              <a href={primaryCta} class="text-sm sm:text-base btn-primary font-semibold text-white px-6 py-2.5 rounded-xl inline-flex items-center transition-colors">
+                Activate {offerName}
+              </a>
+            </div>
+          )}
+        </section>
+      ))}
+    </section>
+
+    <section class="mt-8 rounded-2xl bg-white shadow-natural border border-separator p-8 sm:p-10 text-center">
+      <p class="text-[rgb(17,168,255)] font-semibold uppercase tracking-wide text-sm">Final Step</p>
+      <h2 class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight">Ready to turn paid traffic into warm high-ticket buyers?</h2>
+      <p class="mt-4 text-secondary text-base sm:text-lg max-w-3xl mx-auto">
+        Send us your current offer, ad account status, and backend goal. We will map your low-ticket front-end so it can fund traffic, build trust, and feed your sales team with warmer leads.
+      </p>
+      <div class="mt-6 flex justify-center">
+        <a href={primaryCta} class="text-sm sm:text-base btn-primary font-semibold text-white px-7 py-3 rounded-xl tracking-[-0.0125em] inline-flex items-center justify-center transition-colors">
+          Start The Funnel Trojan Sprint
+        </a>
       </div>
     </section>
   </main>
 
-  <footer class="w-full flex flex-col py-10">
-    <div class="max-w-5xl px-6 mx-auto w-full border-t border-separator pt-8 flex flex-col sm:flex-row justify-between gap-4">
+  <footer class="w-full py-10">
+    <div class="max-w-5xl px-6 mx-auto border-t border-separator pt-8 flex flex-col sm:flex-row justify-between gap-4">
       <span class="text-secondary text-sm">© {new Date().getFullYear()} Stackpine</span>
       <a href="mailto:support@stackpine.com" class="text-sm font-medium hover:opacity-70 transition-opacity">support@stackpine.com</a>
     </div>
